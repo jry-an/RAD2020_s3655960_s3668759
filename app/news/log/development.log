@@ -744,3 +744,2164 @@ Processing by DiscussionsController#index as HTML
 Completed 200 OK in 47ms (Views: 42.3ms | ActiveRecord: 1.1ms)
 
 
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2020-05-03 11:54:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ms0Y0amZuT8kIo6RBuY1yhpHFE707PJh9gy/fyuF7BumQCWJF8/D0RwNJbuR7WuP3zH6V9VG72wueddAHNl5cQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 11:54:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 402ms (Views: 390.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 11:54:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 11:54:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 79ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-05-03 11:55:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mBWUopIKJc6mqFXR1tTzF6AVX0JM/aOJB9//Nvl3O64yb7IN7sZMabXFPStoNq6fc0ASjRaChmVGi9i/QvP3NA==", "user"=>{"email"=>"yesac_1337@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yesac_1337@hotmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 11:55:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2020-05-03 11:55:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BNaZe4ZVqENN4Fp38jsvP6z/Eft2qMNT9ToKxrOurEiZDuuOCcgZX1Cvu+ro2xsiOQi4EOCmJUHrKXl6u3iHOw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 11:55:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-05-03 11:55:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 11:55:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 11:55:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 11:55:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-05-03 11:55:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 11:55:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:30:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 299ms (Views: 286.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:30:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:30:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 75ms (Views: 67.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:30:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:30:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:30:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:30:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:30:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:30:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"txhZ5G5iabZtUqJzly11XZNu+z0oazdGCu+/tI37B1VpcuymmlwEqM70GAWx6YL7VXPJkFKroI7Rc9TnSYrMTQ==", "user"=>{"email"=>"yesac_1335@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yesac_1335@hotmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"txhZ5G5iabZtUqJzly11XZNu+z0oazdGCu+/tI37B1VpcuymmlwEqM70GAWx6YL7VXPJkFKroI7Rc9TnSYrMTQ==", "user"=>{"email"=>"yesac_1335@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 144ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:30:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qlMSBaF4f0JWZQDyITpMZ/AGWqzP7eZzFi+PjgI2tfgsgYai1TQwoISNTc9ozvZyJIjVVEQLWPWPiFyk5h8sSw==", "user"=>{"email"=>"yesac_1335@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yesac_1335@hotmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qlMSBaF4f0JWZQDyITpMZ/AGWqzP7eZzFi+PjgI2tfgsgYai1TQwoISNTc9ozvZyJIjVVEQLWPWPiFyk5h8sSw==", "user"=>{"email"=>"yesac_1335@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 148ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-05-03 12:30:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:31:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 56ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LoL39pEXM2TNoJ1So6wWz9TsJkjnVySSrGboOZ62woPw6EK0ZSleem4GJySFaOFpEvEU5Z2Xs1p3+oNqWscJmw==", "user"=>{"email"=>"yesac_1337@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yesac_1337@hotmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/discussions/new
+Completed 302 Found in 107ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (4.9ms)
+  Rendered discussions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 66ms (Views: 51.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/discussions" for 10.0.2.2 at 2020-05-03 12:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:31:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (5.7ms)
+  Rendered discussions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 59ms (Views: 54.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/discussions" for 10.0.2.2 at 2020-05-03 12:31:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:31:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-05-03 12:32:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (99.6ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<#<Class:0x00007efbb40690a8>:0x00007efbc5d8acf8>):
+     5: 
+     6:       <h2 class="title is-2">Edit <%= resource_name.to_s.humanize %></h2>
+     7: 
+     8:       <% if has_role?(:admin) %>
+     9:         <div class="notification">
+    10:           <p>You are currently an <strong>admin</strong> of the Discussions application.</p>
+    11:         </div>
+  
+app/views/devise/registrations/edit.html.erb:8:in `_app_views_devise_registrations_edit_html_erb___1913512923747054042_69809910587260'
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:32:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2020-05-03 12:32:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M/zb2bI9Q8LZpYmKeXdG8xJ6TiKgBPS9numsHZ5xt6mhLb1+EcjFDKfWKi6spfGjkmBpNdPlkMkHJddMIG/myA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:32:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:32:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:32:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:32:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:32:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 67ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:33:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:34:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:34:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:34:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:34:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:34:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:36:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.6ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/index.html.erb:15
+  Rendered discussions/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 293ms (Views: 280.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:36:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:36:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 77ms (Views: 69.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:37:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (2.4ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (89.5ms)
+  Rendered discussions/index.html.erb within layouts/application (96.8ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<#<Class:0x0000000005f61850>:0x0000000005f3f688>):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:   <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___1333744239729235767_49607280'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__365199625342567596_50005720'
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:37:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.6ms)
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (115.0ms)
+  Rendered discussions/index.html.erb within layouts/application (127.4ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<#<Class:0x0000000005f61850>:0x0000000003dc7be0>):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:   <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___1333744239729235767_26631260'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__365199625342567596_32498240'
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:38:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.5ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (89.4ms)
+  Rendered discussions/index.html.erb within layouts/application (97.4ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<#<Class:0x0000000005f61850>:0x0000000005d8d0d8>):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:     <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___1333744239729235767_48866760'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__365199625342567596_49049060'
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:42:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.4ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (96.8ms)
+  Rendered discussions/index.html.erb within layouts/application (106.4ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<#<Class:0x0000000005f61850>:0x0000000005d8e320>):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:     <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___1333744239729235767_48847520'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__365199625342567596_49051480'
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:42:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (2.1ms)
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (4.2ms)
+  Rendered discussions/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 275ms (Views: 261.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:43:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:43:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 81ms (Views: 69.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:44:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.5ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (1.4ms)
+  Rendered discussions/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:50:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.7ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (2.0ms)
+  Rendered discussions/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:50:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-05-03 12:51:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h4K5svYOKkEIjpimkvHs5qi/3W1nQs5anW+mRy8MOTBGANGML5iWN3imD+fx3Y8A4TCw5LzPih8mB+Z4kEbgJQ==", "user"=>{"email"=>"yesac_1337@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yesac_1337@hotmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/discussions/new
+Completed 302 Found in 104ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:51:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (11.3ms)
+  Rendered discussions/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 79ms (Views: 64.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:53:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (8.9ms)
+  Rendered discussions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:53:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.6ms)
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered discussions/_sidebar.html.erb (12.5ms)
+  Rendered discussions/index.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<User:0x00007efbc4f73e80>
+Did you mean?  has_attribute?):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:     <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/helpers/application_helper.rb:5:in `has_role?'
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___400414438978563228_69809903377700'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__2169124037532879003_69809903710120'
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:53:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (14.3ms)
+  Rendered discussions/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 72ms (Views: 66.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/discussions" for 10.0.2.2 at 2020-05-03 12:53:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.5ms)
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered discussions/_sidebar.html.erb (10.1ms)
+  Rendered discussions/index.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<User:0x00007efbc57da8a8>
+Did you mean?  has_attribute?):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:     <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/helpers/application_helper.rb:5:in `has_role?'
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___400414438978563228_69809908184800'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__2169124037532879003_69809908293500'
+Started GET "/discussions" for 10.0.2.2 at 2020-05-03 12:55:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.6ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered discussions/_sidebar.html.erb (10.6ms)
+  Rendered discussions/index.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<User:0x00007efbc5066658>
+Did you mean?  has_attribute?):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:     <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/helpers/application_helper.rb:5:in `has_role?'
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___400414438978563228_69809903890700'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__2169124037532879003_69809904305180'
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:55:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (31.5ms)
+  Rendered discussions/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 308ms (Views: 277.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:55:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.5ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6
+  Rendered discussions/_sidebar.html.erb (11.1ms)
+  Rendered discussions/index.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<User:0x00007efbd1f33198>
+Did you mean?  has_attribute?):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:     <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/helpers/application_helper.rb:6:in `has_role?'
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___383592238939759265_69810012502700'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__3517726384350129593_69810012657120'
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 12:55:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (8.1ms)
+  Rendered discussions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 63ms (Views: 56.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 12:57:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JzNVuqjEnl0KZcpP7pl0d9DyEg7OeRtaQodssn2xjvE576zpsr4mUx6fBUAscSH0Ku8A7AVzfgHGGv87lXzBiQ==", "discussion"=>{"title"=>"", "content"=>"", "topic_id"=>""}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (8.5ms)
+  Rendered discussions/new.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19: 		<label class="label">Topic</label>
+    20: 		<div class="control has-icons-left">
+    21: 			<span class="select">
+    22: 				<%= form.input_field :topic_id, collection: @topics.map { |t| [t.topic, t.id] }, prompt: "Select topic" %>
+    23: 			</span>
+    24: 			<span class="icon is-small is-left">
+    25: 				<i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_69810002045960'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_69810002045960'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_69810002134920'
+app/controllers/discussions_controller.rb:43:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:38:in `create'
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 12:58:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JzNVuqjEnl0KZcpP7pl0d9DyEg7OeRtaQodssn2xjvE576zpsr4mUx6fBUAscSH0Ku8A7AVzfgHGGv87lXzBiQ==", "discussion"=>{"title"=>"", "content"=>"", "topic_id"=>""}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (8.7ms)
+  Rendered discussions/new.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19: 		<label class="label">Topic</label>
+    20: 		<div class="control has-icons-left">
+    21: 			<span class="select">
+    22: 				<%= form.input_field :topic_id, collection:@topics.map { |t| [t.topic, t.id] }, prompt: "Select topic" %>
+    23: 			</span>
+    24: 			<span class="icon is-small is-left">
+    25: 				<i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_69810013035180'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_69810013035180'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_69809895231300'
+app/controllers/discussions_controller.rb:43:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:38:in `create'
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 12:58:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JzNVuqjEnl0KZcpP7pl0d9DyEg7OeRtaQodssn2xjvE576zpsr4mUx6fBUAscSH0Ku8A7AVzfgHGGv87lXzBiQ==", "discussion"=>{"title"=>"", "content"=>"", "topic_id"=>""}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (7.6ms)
+  Rendered discussions/new.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19: 		<label class="label">Topic</label>
+    20: 		<div class="control has-icons-left">
+    21: 			<span class="select">
+    22: 				<%= form.input_field :topic_id, collection:@topics.map { |t| [t.topic, t.id] }, prompt: "Select topic" %>
+    23: 			</span>
+    24: 			<span class="icon is-small is-left">
+    25: 				<i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_69810009519200'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_69810009519200'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_69810009548620'
+app/controllers/discussions_controller.rb:43:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:38:in `create'
+Started GET "/" for 10.0.2.2 at 2020-05-03 12:59:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.4ms)
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6
+  Rendered discussions/_sidebar.html.erb (9.4ms)
+  Rendered discussions/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_role?' for #<User:0x00007efbd1221dd8>
+Did you mean?  has_attribute?):
+    12:   <br/>
+    13: 
+    14:   <%# Only allow users with admin status to create new topics %>
+    15:   <% if has_role?(:admin) %>
+    16:     <%= link_to 'New Topic', new_topic_path, class:'button is-info' %>
+    17:   <% end %>
+    18: 
+  
+app/helpers/application_helper.rb:6:in `has_role?'
+app/views/discussions/_sidebar.html.erb:15:in `_app_views_discussions__sidebar_html_erb___383592238939759265_69810005451400'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__3517726384350129593_69810005717060'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:02:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.4ms)
+  Rendered discussions/_sidebar.html.erb (0.5ms)
+  Rendered discussions/index.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/vagrant/app/news/app/views/discussions/_sidebar.html.erb:15: syntax error, unexpected ')'
+...@output_buffer.append=( begin );@output_buffer.safe_append='
+...                              ^
+/vagrant/app/news/app/views/discussions/_sidebar.html.erb:20: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/vagrant/app/news/app/views/discussions/_sidebar.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/app/news/app/views/discussions/_sidebar.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/discussions/_sidebar.html.erb:15: syntax error, unexpected ')'
+app/views/discussions/_sidebar.html.erb:20: syntax error, unexpected keyword_end
+app/views/discussions/_sidebar.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/discussions/_sidebar.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__3517726384350129593_69810003320740'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:03:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.3ms)
+  Rendered discussions/_sidebar.html.erb (0.4ms)
+  Rendered discussions/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/vagrant/app/news/app/views/discussions/_sidebar.html.erb:15: syntax error, unexpected '=', expecting keyword_end
+'.freeze;   =begin 
+            ^
+/vagrant/app/news/app/views/discussions/_sidebar.html.erb:20: syntax error, unexpected '=', expecting keyword_end
+   =end 
+   ^
+/vagrant/app/news/app/views/discussions/_sidebar.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/discussions/_sidebar.html.erb:15: syntax error, unexpected '=', expecting keyword_end
+app/views/discussions/_sidebar.html.erb:20: syntax error, unexpected '=', expecting keyword_end
+app/views/discussions/_sidebar.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__3517726384350129593_69809861608220'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:04:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.4ms)
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (207.7ms)
+  Rendered discussions/index.html.erb within layouts/application (216.0ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_channel_path' for #<#<Class:0x0000000005bb5350>:0x00007efbd1a46978>
+Did you mean?  new_discussion_path):
+    11: 
+    12:   <br/>
+    13: 
+    14:   <%= link_to 'New Topic', new_channel_path, class: 'button is-info' %>
+    15: 
+    16:   <%# Only allow users with admin status to create new topics %>
+    17:   <%# Will be added later on %>
+  
+app/views/discussions/_sidebar.html.erb:14:in `_app_views_discussions__sidebar_html_erb___383592238939759265_69810009438900'
+app/views/discussions/index.html.erb:5:in `_app_views_discussions_index_html_erb__3517726384350129593_69810009553340'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:04:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.7ms)
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (1.7ms)
+  Rendered discussions/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 79ms (Views: 73.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics/new" for 10.0.2.2 at 2020-05-03 13:04:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (4.3ms)
+  Rendered topics/new.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 56ms (Views: 49.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/topics" for 10.0.2.2 at 2020-05-03 13:04:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oltjadbge6mIZ36spkNP8fKraz/VRb6TMhCeBQ7XqFc7Dz9kNOiLIa3vZ4rirYdIb5+nK4aVypQKGRza+2AQPQ==", "topic"=>{"topic"=>"League of Legends"}, "commit"=>"Create Topic"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/topics_controller.rb:36
+  [1m[36mTopic Create (1.6ms)[0m  [1m[32mINSERT INTO "topics" ("topic", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic", "League of Legends"], ["created_at", "2020-05-03 13:04:37.643072"], ["updated_at", "2020-05-03 13:04:37.643072"]]
+  ↳ app/controllers/topics_controller.rb:36
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/topics_controller.rb:36
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 11ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/topics" for 10.0.2.2 at 2020-05-03 13:04:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:14
+  Rendered topics/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:04:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.6ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (1.3ms)
+  Rendered discussions/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/new" for 10.0.2.2 at 2020-05-03 13:04:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (3.6ms)
+  Rendered topics/new.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 10.0.2.2 at 2020-05-03 13:04:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:14
+  Rendered topics/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:04:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.9ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (1.4ms)
+  Rendered discussions/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics/1" for 10.0.2.2 at 2020-05-03 13:04:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:73
+  Rendering topics/show.html.erb within layouts/application
+  Rendered topics/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 10.0.2.2 at 2020-05-03 13:04:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:14
+  Rendered topics/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/topics/1" for 10.0.2.2 at 2020-05-03 13:04:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SKfJpT0iTMVM48pI1LL49+3lnmxpZrK4zi0Onp8wtM5WezD2J1j0y1gZBUcWWq10F/iMjqJs1+NKsJ0Xd/37tg==", "id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:73
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/topics_controller.rb:63
+  [1m[36mTopic Destroy (1.7ms)[0m  [1m[31mDELETE FROM "topics" WHERE "topics"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/topics_controller.rb:63
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/topics_controller.rb:63
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/topics" for 10.0.2.2 at 2020-05-03 13:04:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:14
+  Rendered topics/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 47ms (Views: 42.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 13:07:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (16.1ms)
+  Rendered discussions/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 68ms (Views: 62.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:08:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.6ms)
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (2.1ms)
+  Rendered discussions/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 13:09:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (9.8ms)
+  Rendered discussions/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 62ms (Views: 55.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/discussions" for 10.0.2.2 at 2020-05-03 13:09:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (1.6ms)
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (1.0ms)
+  Rendered discussions/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/new" for 10.0.2.2 at 2020-05-03 13:09:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (4.0ms)
+  Rendered topics/new.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/topics" for 10.0.2.2 at 2020-05-03 13:09:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zPB7Dt4KnZNb+ImFMFL098S+8DdDYnSnevKtirnLtCJVpCcDPAJtG35wkKN0vDxOWYo8IxCyAKBC+y9VTHwMSA==", "topic"=>{"topic"=>"League of Legends"}, "commit"=>"Create Topic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/topics_controller.rb:36
+  [1m[36mTopic Create (2.4ms)[0m  [1m[32mINSERT INTO "topics" ("topic", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic", "League of Legends"], ["created_at", "2020-05-03 13:09:17.404338"], ["updated_at", "2020-05-03 13:09:17.404338"]]
+  ↳ app/controllers/topics_controller.rb:36
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/topics_controller.rb:36
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/topics" for 10.0.2.2 at 2020-05-03 13:09:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:14
+  Rendered topics/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 13:09:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (7.5ms)
+  Rendered discussions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 58ms (Views: 52.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 13:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tur0hzz/0Alx6f82FZ72BXwyEaQFBGhsqkQPibbX0OemOXACcci13avmEahzcUVBv59HmIxPLXO39WA2ULEzTQ==", "discussion"=>{"title"=>"Help, I can't get out of Bronze", "content"=>"I've been trying for months and can't get out of Bronze.  I play lots of ADC and Jungle but can't carry games.  Any ideas for help?", "topic_id"=>"2"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (8.9ms)
+  Rendered discussions/new.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19: 		<label class="label">Topic</label>
+    20: 		<div class="control has-icons-left">
+    21: 			<span class="select">
+    22: 				<%= form.input_field :topic_id, collection:@topics.map { |t| [t.topic, t.id] }, prompt: "Select topic" %>
+    23: 			</span>
+    24: 			<span class="icon is-small is-left">
+    25: 				<i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_69810012740420'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_69810012740420'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_69810012772380'
+app/controllers/discussions_controller.rb:43:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:38:in `create'
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 13:13:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tur0hzz/0Alx6f82FZ72BXwyEaQFBGhsqkQPibbX0OemOXACcci13avmEahzcUVBv59HmIxPLXO39WA2ULEzTQ==", "discussion"=>{"title"=>"Help, I can't get out of Bronze", "content"=>"I've been trying for months and can't get out of Bronze.  I play lots of ADC and Jungle but can't carry games.  Any ideas for help?", "topic_id"=>"2"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (15.3ms)
+  Rendered discussions/new.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19: 		<label class="label">Topic</label>
+    20: 		<div class="control has-icons-left">
+    21: 			<span class="select">
+    22: 				<%= form.input_field :topic_id, collection:@topics.map { |t| [t.topic, t.id] }, prompt: "Select topic" %>
+    23: 			</span>
+    24: 			<span class="icon is-small is-left">
+    25: 				<i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_69810005219000'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_69810005219000'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_69810005073700'
+app/controllers/discussions_controller.rb:43:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:38:in `create'
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 13:14:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tur0hzz/0Alx6f82FZ72BXwyEaQFBGhsqkQPibbX0OemOXACcci13avmEahzcUVBv59HmIxPLXO39WA2ULEzTQ==", "discussion"=>{"title"=>"Help, I can't get out of Bronze", "content"=>"I've been trying for months and can't get out of Bronze.  I play lots of ADC and Jungle but can't carry games.  Any ideas for help?", "topic_id"=>"2"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (12.0ms)
+  Rendered discussions/new.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19:     <label class="label">Channel</label>
+    20:     <div class="control has-icons-left">
+    21:       <span class="select">
+    22:         <%= f.input_field :topic_id, collection:@topics.map { |c| [c.channel, c.id] }, prompt: "Select topic" %>
+    23:       </span>
+    24:       <span class="icon is-small is-left">
+    25:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_24579760'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_24579760'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_26578880'
+app/controllers/discussions_controller.rb:43:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:38:in `create'
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 13:16:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tur0hzz/0Alx6f82FZ72BXwyEaQFBGhsqkQPibbX0OemOXACcci13avmEahzcUVBv59HmIxPLXO39WA2ULEzTQ==", "discussion"=>{"title"=>"Help, I can't get out of Bronze", "content"=>"I've been trying for months and can't get out of Bronze.  I play lots of ADC and Jungle but can't carry games.  Any ideas for help?", "topic_id"=>"2"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:39
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (9.9ms)
+  Rendered discussions/new.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19:     <label class="label">Channel</label>
+    20:     <div class="control has-icons-left">
+    21:       <span class="select">
+    22:         <%= f.input_field :topic_id, collection:@topics.map { |c| [c.channel, c.id] }, prompt: "Select topic" %>
+    23:       </span>
+    24:       <span class="icon is-small is-left">
+    25:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_69810011846380'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_69810011846380'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_69810011869140'
+app/controllers/discussions_controller.rb:43:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:38:in `create'
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 13:16:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (13.6ms)
+  Rendered discussions/new.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `channel' for #<Topic:0x00007efbd12ddf88>
+Did you mean?  changed
+               changes):
+    19:     <label class="label">Channel</label>
+    20:     <div class="control has-icons-left">
+    21:       <span class="select">
+    22:         <%= f.input_field :topic_id, collection:@topics.map { |c| [c.channel, c.id] }, prompt: "Select topic" %>
+    23:       </span>
+    24:       <span class="icon is-small is-left">
+    25:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block (2 levels) in _app_views_discussions__form_html_erb__2551151961269563679_69810006685640'
+app/views/discussions/_form.html.erb:22:in `map'
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb__2551151961269563679_69810006685640'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb__2551151961269563679_69810006685640'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__4414377144109140213_69810006792560'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:16:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_topics' for #<DiscussionsController:0x000000000604f168>
+Did you mean?  find_channels):
+  
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:17:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_topics' for #<DiscussionsController:0x0000000004cd38f0>
+Did you mean?  find_channels):
+  
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:17:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_topics' for #<DiscussionsController:0x0000000005a061a8>
+Did you mean?  find_channels):
+  
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:17:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (2.3ms)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:7
+  Rendered discussions/_sidebar.html.erb (5.4ms)
+  Rendered discussions/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 319ms (Views: 303.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 13:17:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (29.8ms)
+  Rendered discussions/new.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `channel' for #<Topic:0x00007efbcdeea1b8>
+Did you mean?  changed
+               changes):
+    19:     <label class="label">Channel</label>
+    20:     <div class="control has-icons-left">
+    21:       <span class="select">
+    22:         <%= f.input_field :topic_id, collection:@topics.map { |c| [c.channel, c.id] }, prompt: "Select topic" %>
+    23:       </span>
+    24:       <span class="icon is-small is-left">
+    25:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block (2 levels) in _app_views_discussions__form_html_erb___902787903505918381_69809978856820'
+app/views/discussions/_form.html.erb:22:in `map'
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb___902787903505918381_69809978856820'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb___902787903505918381_69809978856820'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__554849227798389337_69809895314660'
+Started GET "/discussions/new" for 10.0.2.2 at 2020-05-03 13:18:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (14.6ms)
+  Rendered discussions/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 13:19:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t+1oYrtuMNs9ihscLSkayuibgkmI7OkqnlZBPJ4sJAypMZExoRSI1Slw1BPvwU9JEoaQq0PmjHEay9K1duFrdA==", "discussion"=>{"title"=>"Help, I can't get out of Bronze", "content"=>"Help!  I've been playing league for  5 years and can't get out of Bronze.  Can anyone give me tips to get better?", "topic_id"=>"2"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:37
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (7.9ms)
+  Rendered discussions/new.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19:     <label class="label">Channel</label>
+    20:     <div class="control has-icons-left">
+    21:       <span class="select">
+    22:         <%= f.input_field :topic_id, collection:@topics.map { |c| [c.topic, c.id] }, prompt: "Select topic" %>
+    23:       </span>
+    24:       <span class="icon is-small is-left">
+    25:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb___902787903505918381_69809861751100'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb___902787903505918381_69809861751100'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__554849227798389337_69809928974440'
+app/controllers/discussions_controller.rb:41:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:36:in `create'
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 13:25:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t+1oYrtuMNs9ihscLSkayuibgkmI7OkqnlZBPJ4sJAypMZExoRSI1Slw1BPvwU9JEoaQq0PmjHEay9K1duFrdA==", "discussion"=>{"title"=>"Help, I can't get out of Bronze", "content"=>"Help!  I've been playing league for  5 years and can't get out of Bronze.  Can anyone give me tips to get better?", "topic_id"=>"2"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :topic_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/discussions_controller.rb:37
+  Rendering discussions/new.html.erb within layouts/application
+  Rendered discussions/_form.html.erb (10.5ms)
+  Rendered discussions/new.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    19:     <label class="label">Topic</label>
+    20:     <div class="control has-icons-left">
+    21:       <span class="select">
+    22:         <%= f.input_field :topic_id, collection:@topics.map { |c| [c.topic, c.id] }, prompt: "Select topic" %>
+    23:       </span>
+    24:       <span class="icon is-small is-left">
+    25:         <i class="fa fa-tag"></i>
+  
+app/views/discussions/_form.html.erb:22:in `block in _app_views_discussions__form_html_erb___902787903505918381_69809977481040'
+app/views/discussions/_form.html.erb:3:in `_app_views_discussions__form_html_erb___902787903505918381_69809977481040'
+app/views/discussions/new.html.erb:3:in `_app_views_discussions_new_html_erb__554849227798389337_69809977700280'
+app/controllers/discussions_controller.rb:41:in `block (2 levels) in create'
+app/controllers/discussions_controller.rb:36:in `create'
+Started POST "/discussions" for 10.0.2.2 at 2020-05-03 13:25:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t+1oYrtuMNs9ihscLSkayuibgkmI7OkqnlZBPJ4sJAypMZExoRSI1Slw1BPvwU9JEoaQq0PmjHEay9K1duFrdA==", "discussion"=>{"title"=>"Help, I can't get out of Bronze", "content"=>"Help!  I've been playing league for  5 years and can't get out of Bronze.  Can anyone give me tips to get better?", "topic_id"=>"2"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/discussions_controller.rb:37
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:37
+  [1m[36mDiscussion Create (1.2ms)[0m  [1m[32mINSERT INTO "discussions" ("title", "content", "created_at", "updated_at", "user_id", "topic_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Help, I can't get out of Bronze"], ["content", "Help!  I've been playing league for  5 years and can't get out of Bronze.  Can anyone give me tips to get better?"], ["created_at", "2020-05-03 13:25:59.963454"], ["updated_at", "2020-05-03 13:25:59.963454"], ["user_id", 1], ["topic_id", 2]]
+  ↳ app/controllers/discussions_controller.rb:37
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/discussions_controller.rb:37
+Redirected to http://localhost:3000/discussions/1
+Completed 302 Found in 43ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/discussions/1" for 10.0.2.2 at 2020-05-03 13:25:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:74
+  Rendering discussions/show.html.erb within layouts/application
+  Rendered discussions/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 277ms (Views: 271.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:33:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:11
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:23
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered shared/_discussions.html.erb (125.3ms)
+  Rendered discussions/index.html.erb within layouts/application (128.9ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `discussion_author' for #<#<Class:0x00000000051fc430>:0x00007efbbc0942f0>
+Did you mean?  discussion_path
+               discussions_path
+               discussion_url):
+    34: 
+    35:         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
+    36:         the post and allows admins to edit/delete all discussions %>
+    37:         <% if discussion_author(discussion) || has_role?(:admin) %>
+    38:         <div class="column has-text-right">
+    39:           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>
+    40:           <%# Provide a confirmation button if you attempt to delete a post %>
+  
+app/views/shared/_discussions.html.erb:37:in `block in _app_views_shared__discussions_html_erb___1278492421585967313_69809828266540'
+app/views/shared/_discussions.html.erb:7:in `_app_views_shared__discussions_html_erb___1278492421585967313_69809828266540'
+app/views/discussions/index.html.erb:4:in `_app_views_discussions_index_html_erb__2294533203231642503_69809828308740'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:34:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:11
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:23
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered shared/_discussions.html.erb (108.5ms)
+  Rendered discussions/index.html.erb within layouts/application (112.3ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `discussion_author' for #<#<Class:0x00000000051fc430>:0x00007efbc8043c90>
+Did you mean?  discussion_path
+               discussions_path
+               discussion_url):
+    34: 
+    35:         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
+    36:         the post and allows admins to edit/delete all discussions %>
+    37:         <% if discussion_author(discussion) || has_role?(:admin) %>
+    38:         <div class="column has-text-right">
+    39:           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>
+    40:           <%# Provide a confirmation button if you attempt to delete a post %>
+  
+app/views/shared/_discussions.html.erb:37:in `block in _app_views_shared__discussions_html_erb___1278492421585967313_69809861731080'
+app/views/shared/_discussions.html.erb:7:in `_app_views_shared__discussions_html_erb___1278492421585967313_69809861731080'
+app/views/discussions/index.html.erb:4:in `_app_views_discussions_index_html_erb__2294533203231642503_69809928807240'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:34:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:11
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:23
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered shared/_discussions.html.erb (137.8ms)
+  Rendered discussions/index.html.erb within layouts/application (141.2ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `discussion_author' for #<#<Class:0x0000000005f49408>:0x0000000005f00de8>
+Did you mean?  discussion_path
+               discussions_path
+               discussion_url):
+    34: 
+    35:         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
+    36:         the post and allows admins to edit/delete all discussions %>
+    37:         <% if discussion_author(discussion) || has_role?(:admin) %>
+    38:         <div class="column has-text-right">
+    39:           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>
+    40:           <%# Provide a confirmation button if you attempt to delete a post %>
+  
+app/views/shared/_discussions.html.erb:37:in `block in _app_views_shared__discussions_html_erb__4332928878804727839_49708500'
+app/views/shared/_discussions.html.erb:7:in `_app_views_shared__discussions_html_erb__4332928878804727839_49708500'
+app/views/discussions/index.html.erb:4:in `_app_views_discussions_index_html_erb__426511228998551183_49959440'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:35:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:11
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:23
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered shared/_discussions.html.erb (133.9ms)
+  Rendered discussions/index.html.erb within layouts/application (137.0ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `discussion_author' for #<#<Class:0x0000000005f49408>:0x0000000005b11228>
+Did you mean?  discussion_path
+               discussions_path
+               discussion_url):
+    34: 
+    35:         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
+    36:         the post and allows admins to edit/delete all discussions %>
+    37:         <% if discussion_author(discussion) || has_role?(:admin) %>
+    38:         <div class="column has-text-right">
+    39:           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>
+    40:           <%# Provide a confirmation button if you attempt to delete a post %>
+  
+app/views/shared/_discussions.html.erb:37:in `block in _app_views_shared__discussions_html_erb__4332928878804727839_47849660'
+app/views/shared/_discussions.html.erb:7:in `_app_views_shared__discussions_html_erb__4332928878804727839_47849660'
+app/views/discussions/index.html.erb:4:in `_app_views_discussions_index_html_erb__426511228998551183_47746940'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:35:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:11
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:23
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered shared/_discussions.html.erb (130.7ms)
+  Rendered discussions/index.html.erb within layouts/application (133.8ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `discussion_author' for #<#<Class:0x0000000005f49c28>:0x0000000005f05690>
+Did you mean?  discussion_path
+               discussions_path
+               discussion_url):
+    34: 
+    35:         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
+    36:         the post and allows admins to edit/delete all discussions %>
+    37:         <% if discussion_author(discussion) || has_role?(:admin) %>
+    38:         <div class="column has-text-right">
+    39:           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>
+    40:           <%# Provide a confirmation button if you attempt to delete a post %>
+  
+app/views/shared/_discussions.html.erb:37:in `block in _app_views_shared__discussions_html_erb__2453064139742492280_49742120'
+app/views/shared/_discussions.html.erb:7:in `_app_views_shared__discussions_html_erb__2453064139742492280_49742120'
+app/views/discussions/index.html.erb:4:in `_app_views_discussions_index_html_erb__710342110134737096_49960700'
+Started GET "/" for 10.0.2.2 at 2020-05-03 13:35:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.7/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:11
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:23
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY created_at desc LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/vagrant/.rvm/rubies/ruby-2.5.7/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered shared/_discussions.html.erb (143.3ms)
+  Rendered discussions/index.html.erb within layouts/application (146.5ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `discussion_author' for #<#<Class:0x0000000005f4e250>:0x0000000005f019a0>
+Did you mean?  discussion_path
+               discussions_path
+               discussion_url):
+    34: 
+    35:         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
+    36:         the post and allows admins to edit/delete all discussions %>
+    37:         <% if discussion_author(discussion) || has_role?(:admin) %>
+    38:         <div class="column has-text-right">
+    39:           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>
+    40:           <%# Provide a confirmation button if you attempt to delete a post %>
+  
+app/views/shared/_discussions.html.erb:37:in `block in _app_views_shared__discussions_html_erb___1985850863552104504_49734580'
+app/views/shared/_discussions.html.erb:7:in `_app_views_shared__discussions_html_erb___1985850863552104504_49734580'
+app/views/discussions/index.html.erb:4:in `_app_views_discussions_index_html_erb___2698560308815422241_49969600'

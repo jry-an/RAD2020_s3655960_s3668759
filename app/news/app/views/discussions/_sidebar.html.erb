@@ -1,0 +1,19 @@
+<%# Bulma is being used below %>
+
+<div class="column is-3 is-offset-1">
+  <h3 class="title is-5 has-text-grey-light">Topics</h3>
+
+  <ul class="list">
+    <% @topics.each do |t| %>
+    <li><%= link_to t.topic, t %></li>
+    <% end %>
+  </ul>
+
+  <br/>
+
+  <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
+
+  <%# Only allow users with admin status to create new topics %>
+  <%# Will be added later on %>
+
+</div>

@@ -1,6 +1,6 @@
 class DiscussionsController < ApplicationController
-  before_action :set_discussion, only: [:show, :edit, :update, :destroy]
-  
+
+  before_action :set_discussion, only: [:show, :edit, :update, :destroy] 
   # Call the method to get all topics and order them via created date
   # on pages index, show, new and edit
   before_action :find_topics, only: [:index, :show, :new, :edit]
@@ -10,7 +10,6 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
-    # Order all the discussions via created date
     @discussions = Discussion.all.order('created_at desc')
   end
 
@@ -22,7 +21,6 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/new
   def new
-    # Get the discussions for the current user, build creates them
     @discussion = current_user.discussions.build
   end
 
@@ -76,13 +74,12 @@ class DiscussionsController < ApplicationController
       @discussion = Discussion.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    def discussion_params
-      params.require(:discussion).permit(:title, :content)
-    end
-
-    # Get all topics and order them via created date
     def find_topics
       @topics = Topic.all.order('created_at desc')
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def discussion_params
+      params.require(:discussion).permit(:title, :content, :topic_id)
     end
 end
