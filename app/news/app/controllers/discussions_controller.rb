@@ -1,20 +1,29 @@
 class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
+  
+  # Call the method to get all topics and order them via created date
+  # on pages index, show, new and edit
+  before_action :find_topics, only: [:index, :show, :new, :edit]
+  # Only allow users that are NOT signed in to view index and show
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /discussions
   # GET /discussions.json
   def index
-    @discussions = Discussion.all
+    # Order all the discussions via created date
+    @discussions = Discussion.all.order('created_at desc')
   end
 
   # GET /discussions/1
   # GET /discussions/1.json
   def show
+    @discussions = Discussion.all.order('created_at desc')
   end
 
   # GET /discussions/new
   def new
-    @discussion = Discussion.new
+    # Get the discussions for the current user, build creates them
+    @discussion = current_user.discussions.build
   end
 
   # GET /discussions/1/edit
@@ -24,7 +33,7 @@ class DiscussionsController < ApplicationController
   # POST /discussions
   # POST /discussions.json
   def create
-    @discussion = Discussion.new(discussion_params)
+    @discussion = current_user.discussions.build(discussion_params)
 
     respond_to do |format|
       if @discussion.save
@@ -70,5 +79,10 @@ class DiscussionsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def discussion_params
       params.require(:discussion).permit(:title, :content)
+    end
+
+    # Get all topics and order them via created date
+    def find_topics
+      @topics = Topic.all.order('created_at desc')
     end
 end
