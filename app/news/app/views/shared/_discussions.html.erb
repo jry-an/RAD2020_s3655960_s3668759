@@ -34,13 +34,13 @@
 
         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
         the post and allows admins to edit/delete all discussions %>
-        <%# if discussion_author(discussion) || has_role?(:admin) %>
+        <% if discussion_author(discussion) %>
         <div class="column has-text-right">
           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>
           <%# Provide a confirmation button if you attempt to delete a post %>
           <%= link_to 'Delete', discussion, method: :delete, data: { confirm: 'Are you sure?' }, class: "button" %>
         </div>
-        <%# end %>
+        <% end %>
       </div>
     <% end %>
   </div>

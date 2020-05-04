@@ -12,10 +12,11 @@
         <p>
           <strong><%= reply.user.username %></strong> <small><%= time_ago_in_words(reply.created_at) %></small>
           <br/>
-          <%= reply.reply %>
+          <%= markdown(reply.reply) %>
         </p>
       </div>
-      <%# if reply_author(reply) %>
+      <%# Checks against the discussions helper.rb %>
+      <% if reply_author(reply) %>
       <nav class="level is-mobile">
         <div class="level-left">
           <a class="level-item">
@@ -33,7 +34,7 @@
           </a>
         </div>
       </nav>
-      <%# end %>
+      <% end %>
     </div>
   </article>
 </div>
