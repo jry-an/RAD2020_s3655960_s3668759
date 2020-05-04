@@ -10,23 +10,23 @@ class RepliesController < ApplicationController
 	# method for creating a new reply
 	def create
 		# Creates a reply within a discussion 
-		@reply = @discussion.replies.create(params[:reply]).permit(:reply, :discussion_id)
+		@reply = @discussion.replies.create(params[:reply].permit(:reply, :discussion_id))
 		# Sets the reply user id to the current user
 		# Show that we can show what user wrote that reply
 		@reply.user_id = current_user.id
 
-		respond_to do |layout|
+		respond_to do |format|
 			if @reply.save 
 				# If the reply has saved, redirect to the discussion
-				layout.html { redirect_to discussion_path(@discussion) }
+				format.html { redirect_to discussion_path(@discussion) }
 				# Allows us to load a new reply without having to refresh the whole page
-				layout.js # render create.js.erb
+				format.js # render create.js.erb
 			else
 				# If the reply did not save, show error message
-				layout.html { redirection_to discussion_path(@discussion), 
-					notice: 'Error: Reply did not enter.  Please try again'}
+				format.html { redirection_to discussion_path(@discussion), 
+					notice: 'Reply did not save.  Please try again'}
 				# Allows us to load a new reply without having to refresh the whole page
-				layout.js # render create.js.erb
+				format.js # render create.js.erb
 			end
 		end
 	end
@@ -58,15 +58,15 @@ class RepliesController < ApplicationController
 		# Find the reply
 		@reply = @discussion.replies.find(params[:id])
 
-		respond_to do |layout|
+		respond_to do |format|
 			if @reply.update(reply_params)
 				# If the reply was successfully updated, display a notice to 
 				# the user and go to the discussion
-				layout.html { redirect_to discussion_path(@discussion), 
-					notice: 'Reply was added.'}
+				format.html { redirect_to discussion_path(@discussion), 
+					notice: 'Reply was updated.'}
 			else 
 				# If the reply wasn't added, redirect to the edit page
-				layout.html { render :edit }
+				format.html { render :edit }
 				format.json { redner json: @reply.errors, status: :unprocessable_entity }
 			end
 		end

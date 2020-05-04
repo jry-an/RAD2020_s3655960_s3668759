@@ -10,18 +10,20 @@
       	<%# Check if the user is the author of a discussion, if so, show edit/delete options %>
         <%# if discussion_author(@discussion) %>
         <div class="buttons">
-            <%= link_to 'Edit Discussion', edit_discussion_path(@discussion), class:'button'%>
-            <%= link_to 'Delete', discussion_path(@discussion), method: :delete, data: { confirm: "Delete discussion?" }, class:'button' %>
+            <%= link_to 'Edit', edit_discussion_path(@discussion), class:'button'%>
+            <%= link_to 'Delete', discussion_path(@discussion), method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, class:'button' %>
         </div>
         <%# end %>
       </div>
     </div>
-    <div class="content"><%= markdown(@discussion.content) %></div>
+    <div class="content"><%= @discussion.content %></div>
 
     <h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> Replies</h2>
 
     <div id="discussion-replies">
-      <%#= render @discussion.replies %>
+      <%# This looks for a partial called reply
+      <%# Render the replies and load _reply.html.erb %>
+      <%= render @discussion.replies %>
     </div>
 
     <hr />
@@ -30,7 +32,7 @@
     <%# Check if the user is signed in %>
     <% if user_signed_in? %>
       <%# If the user is signed in, load replies/form %>
-      <%#= render 'replies/form' %>
+      <%= render 'replies/form' %>
     <% else %>
     <%# If the user isn't signed in, display %>
     <p>To reply, please <%= link_to 'login', new_user_session_path %>. If you don't have an account with us, please 
