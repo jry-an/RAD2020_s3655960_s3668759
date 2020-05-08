@@ -68,18 +68,23 @@ class DiscussionsController < ApplicationController
     end
   end
 
+  def increase_visit
+    visit_counter +=1
+    save!
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_discussion
-      @discussion = Discussion.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_discussion
+    @discussion = Discussion.find(params[:id])
+  end
 
-    def find_topics
-      @topics = Topic.all.order('created_at desc')
-    end
+  def find_topics
+    @topics = Topic.all.order('created_at desc')
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def discussion_params
-      params.require(:discussion).permit(:title, :content, :topic_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def discussion_params
+    params.require(:discussion).permit(:title, :content, :topic_id)
+  end
 end
