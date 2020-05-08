@@ -26,4 +26,5 @@ Vagrant.configure("2") do |config|
   # current working folder basename
   base_name = `basename $(pwd)`
   config.vm.provision "shell", privileged: false, path: "vagrant/setup.sh", args: base_name
+
 end
