@@ -37,7 +37,7 @@
   <ul class="list">
   <% @discussions.each do |d| %>
     <li>
-      <%= link_to d.title, d %></li>
+      <%= link_to d.title, d %> <%= d.view_count %></li>
   <% end %>
   </ul>
 

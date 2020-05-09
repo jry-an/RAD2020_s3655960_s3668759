@@ -17,6 +17,7 @@ class DiscussionsController < ApplicationController
   # GET /discussions/1.json
   def show
     @discussions = Discussion.all.order('created_at desc')
+    @discussion.increment
   end
 
   # GET /discussions/new
@@ -66,11 +67,6 @@ class DiscussionsController < ApplicationController
       format.html { redirect_to discussions_url, notice: 'Discussion was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def increase_visit
-    visit_counter +=1
-    save!
   end
 
   private
