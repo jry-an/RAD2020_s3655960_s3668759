@@ -35,10 +35,9 @@
   
   <h3 class="title is-5 has-text-grey-light">Top Posts</h3>
   <ul class="list">
-  <% @discussions.each do |d| %>
-    <li>
-      <%= link_to d.title, d %> <%= d.view_count %></li>
-  <% end %>
+    <% @discussions.sort_by{|d| d[:view_count]}.reverse[0..4].each do |d| %>
+      <li><%= link_to d.title, d %> <%= d.view_count %></li>
+    <% end %>
   </ul>
 
 </div>
