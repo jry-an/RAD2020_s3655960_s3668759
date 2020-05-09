@@ -32,6 +32,13 @@
           </div>
         </div>
 
+        <div class="column has-text-right">
+          <p><em><small>Views: <%= discussion.view_count %>
+          </small>
+          </em>
+          </p>
+        </div>
+
         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
         the post and allows admins to edit/delete all discussions %>
         <% if discussion_author(discussion) %>

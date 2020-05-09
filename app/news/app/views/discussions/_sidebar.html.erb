@@ -32,9 +32,9 @@
   <br/>
   <br/>
   <br/>
-  
   <h3 class="title is-5 has-text-grey-light">Top Posts</h3>
   <ul class="list">
+    <!--  This reverses the array and gets the top 5 posts-->
     <% @discussions.sort_by{|d| d[:view_count]}.reverse[0..4].each do |d| %>
       <li><%= link_to d.title, d %> <%= d.view_count %></li>
     <% end %>
