@@ -1,7 +1,7 @@
 class RepliesController < ApplicationController
 
 	# Check the user is logged in
-	before_action :authenticate_user!
+	# before_action :authenticate_user!
 	# Find the reply for each of the views (edit, update, show, destroy)
 	before_action :set_reply, only: [:edit, :update, :show, :destroy]
 	# Find the discussion for each of the views (create, edit, show, update, destroy)

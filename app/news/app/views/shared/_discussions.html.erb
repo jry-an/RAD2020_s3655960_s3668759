@@ -25,7 +25,7 @@
                 <%= link_to discussion.topic.topic, discussion.topic %>
               <% end %>
               <%# Showing the username of the user who created the discussion %>
-              by <%= discussion.user.username %>
+              by <%= discussion.user.username or discussion.user.name %>
               </small>
               </em>
             </p>
@@ -34,6 +34,10 @@
 
         <div class="column has-text-right">
           <p><em><small>Views: <%= discussion.view_count %>
+          </small>
+          </em>
+          </p>
+          <p><em><small>Replies: <%= discussion.replies.count %>
           </small>
           </em>
           </p>

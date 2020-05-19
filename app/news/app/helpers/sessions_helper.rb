@@ -28,6 +28,7 @@ def logged_in?
   !current_user.nil?
 end
 
+#remembers the logged in user
 def remember(user)
   user.remember
   cookies.permanent.signed[:user_id] = user.id

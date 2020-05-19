@@ -5,7 +5,7 @@ class DiscussionsController < ApplicationController
   # on pages index, show, new and edit
   before_action :find_topics, only: [:index, :show, :new, :edit]
   # Only allow users that are NOT signed in to view index and show
-  before_action :authenticate_user!, except: [:index, :show]
+  # before_action :authenticate_user!, except: [:index, :show]
 
   # GET /discussions
   # GET /discussions.json
@@ -22,7 +22,7 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/new
   def new
-    @discussion = current_user.discussions.build
+    @discussion = current_user.discussions.new
   end
 
   # GET /discussions/1/edit
