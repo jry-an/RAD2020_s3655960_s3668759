@@ -7,7 +7,6 @@
     <ul class="users">
         <table>
           <tr>
-<!--            :last_seen_at needs to be fixed-->
             <% Array(User.all.order('last_seen_at desc')[0..3]).each do |d| %>
           <td>
             <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20 ), d %>
