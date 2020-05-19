@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_15_053816) do
+ActiveRecord::Schema.define(version: 2020_05_19_042957) do
 
   create_table "discussions", force: :cascade do |t|
     t.string "title"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_053816) do
     t.string "name"
     t.string "password_digest"
     t.string "remember_digest"
+    t.integer "mobile_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

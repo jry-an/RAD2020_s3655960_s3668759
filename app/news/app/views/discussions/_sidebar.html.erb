@@ -4,13 +4,40 @@
 
   <h3 class="title is-5 has-text-grey-light">Recent Members</h3>
   <ul class="list">
-<!--    <ul class="users">-->
-      <%# @discussions.sort_by { |d| d[:last_seen_at]}.each do |d| %>
-<!--        <p><%#=link_to d.user.last_seen_at, d.user %></p>-->
-<!--        <li><%#= link_to  gravatar_image_tag(d.user.email, class:'border-radius-50', size: 48, alt: d.user.username), d.user %>-->
-<!--        </li>-->
-      <%# end %>
-<!--    </ul>-->
+    <ul class="users">
+        <table>
+          <tr>
+            <% @discussions.sort_by{|d| d[:last_seen_at]}[0..2].each do |d| %>
+          <td>
+            <%= link_to  gravatar_image_tag(d.user.email, class:'border-radius-20', size: 20, alt: d.user.username), d.user %>
+              Name: <%=link_to d.user.username, d.user %>
+            </td>
+            <% end %>
+              <tr>
+                <% @discussions.sort_by{|d| d[:last_seen_at]}[3..5].each do |d| %>
+                  <td>
+                    <%= link_to  gravatar_image_tag(d.user.email, class:'border-radius-20', size: 20, alt: d.user.username), d.user %>
+                    Name: <%=link_to d.user.username, d.user %>
+                  </td>
+                <% end %>
+                <tr>
+                  <% @discussions.sort_by{|d| d[:last_seen_at]}[6..8].each do |d| %>
+                    <td>
+                      <%= link_to  gravatar_image_tag(d.user.email, class:'border-radius-20', size: 20, alt: d.user.username), d.user %>
+                      Name: <%=link_to d.user.username, d.user %>
+                    </td>
+                  <% end %>
+
+                </tr>
+
+              </tr>
+          </tr>
+
+
+
+        </table>
+        </li>
+    </ul>
   </ul>
 
   <br/>
