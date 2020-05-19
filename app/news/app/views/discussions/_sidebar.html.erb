@@ -3,8 +3,6 @@
 <div class="column is-3 is-offset-1">
 
   <h3 class="title is-5 has-text-grey-light">Recent Members</h3>
-  <ul class="list">
-    <ul class="users">
         <table>
           <tr>
             <% Array(User.all.order('last_seen_at desc')[0..3]).each do |d| %>
@@ -16,7 +14,7 @@
               <tr>
                 <% Array(User.all.order('last_seen_at desc')[4..7]).each do |d| %>
                   <td>
-                    <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20,), d %>
+                    <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20), d %>
                     Name: <%=link_to d.username, d %>
                   </td>
                 <% end %>
@@ -28,16 +26,7 @@
                     </td>
                   <%end%>
                 </tr>
-              </tr>
-          </tr>
-
-
-
         </table>
-        </li>
-    </ul>
-  </ul>
-
   <br/>
   <br/>
   <br/>
