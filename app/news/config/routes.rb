@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   resources :discussions do
   	resources :replies
   end
+  resources :discussions do
+    member do
+      get :users
+    end
+  end
 
   root 'discussions#index'
 
