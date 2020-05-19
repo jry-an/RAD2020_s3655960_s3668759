@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       remember user
+      user.update_attribute(:last_seen_at, Time.now)
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_back_or user
     else
