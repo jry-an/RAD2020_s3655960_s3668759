@@ -10,9 +10,9 @@
           <%# Show the users image %>
           <%= gravatar_image_tag(discussion.user.email, class:'border-radius-50', size: 48, alt: discussion.user.username) %>
         </div>
-        <div class="column is-8">
+        <div class="column is-8" >
           <%= link_to discussion do %>
-            <h3 class="title is-5"><%= discussion.title %></h3>
+            <h3 class="title is-5" id="discuss"><%= discussion.title %></h3>
           <% end %>
           <div class="content">
             <%# Limiting the number of characters for the discussion, 
