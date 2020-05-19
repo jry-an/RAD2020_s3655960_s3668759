@@ -25,7 +25,7 @@
                 <%= link_to discussion.topic.topic, discussion.topic %>
               <% end %>
               <%# Showing the username of the user who created the discussion %>
-              by <%= discussion.user.username or discussion.user.name %>
+              by <%= link_to discussion.user.username, User.where(username: discussion.user.username).first %>
               </small>
               </em>
             </p>
