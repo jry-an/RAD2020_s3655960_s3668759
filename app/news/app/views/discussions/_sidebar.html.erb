@@ -8,26 +8,26 @@
         <table>
           <tr>
 <!--            :last_seen_at needs to be fixed-->
-            <% User.all[0..2].each do |d| %>
+            <% Array(User.all.order('last_seen_at desc')[0..3]).each do |d| %>
           <td>
-            <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20, alt: d.username), d %>
+            <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20 ), d %>
               Name: <%=link_to d.username, d %>
             </td>
             <% end %>
               <tr>
-                <% User.all[3..5].each do |d| %>
+                <% Array(User.all.order('last_seen_at desc')[4..7]).each do |d| %>
                   <td>
-                    <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20, alt: d.username), d %>
+                    <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20,), d %>
                     Name: <%=link_to d.username, d %>
                   </td>
                 <% end %>
                 <tr>
-                  <% User.all[6..8].each do |d| %>
+                  <% Array(User.all.order('last_seen_at desc')[8..11]).each do |d| %>
                     <td>
-                      <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20, alt: d.username), d %>
+                      <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20), d %>
                       Name: <%=link_to d.username, d %>
                     </td>
-                  <% end %>
+                  <%end%>
                 </tr>
               </tr>
           </tr>
