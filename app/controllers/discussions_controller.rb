@@ -22,7 +22,12 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/new
   def new
-    @discussion = current_user.discussions.new
+    if current_user
+      @discussion = current_user.discussions.new
+    else
+      flash[:notice] = 'Please login before creating a discussion'
+      redirect_to login_path
+    end
   end
 
   # GET /discussions/1/edit
