@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome!"
+      @user.update_attribute(:date_created, Date.now)
       redirect_to @user
     else
       render 'new'

@@ -1,6 +1,31 @@
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-  <%= @user.email %>
-</h1>
+<div>
+<!--  image and username-->
+<h1> <%= gravatar_for @user %>
+  <%= @user.username %></h1>
+
+<!--  date created-->
+  <p>Date Created: <%= @user.date_created %></p>
+  <br>
+<!--  show discussions-->
+  <%@user.discussions.order('created_at desc').each do |d| %>
+  <p>Topic: <%= link_to d.title, d%></p>
+    <p>Content: <%= d.content%></p>
+    <p>Created: <%= d.created_at%></p>
+    <br>
+
+<!--    show user comments-->
+    <%Discussion.all.order('created_at desc').each do |r| %>
+    <% d.replies.each do |c|%>
+      <%if c.user.username == @user.username %>
+       <p>Recent Comments: <%= link_to c.reply, d %></p>
+          <p>Comments Time: <%= c.created_at %></p>
+          <p>Comment on Post: <%= link_to r.title, r %></p>
+<%end %>
+      <%end %>
+    <%end %>
+
+
+  <%end %>
+
+</div>
