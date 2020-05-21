@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome!"
-      @user.update_attribute(:date_created, Date.now)
+      @user.update_attribute(:date_created, Date.today)
       redirect_to @user
     else
       render 'new'
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password,
+    params.require(:user).permit(:username, :date_created,  :city, :email, :password,
                                  :password_confirmation)
   end
 
