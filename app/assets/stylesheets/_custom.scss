@@ -19,3 +19,13 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.section {
+  flex: 1;
+}
