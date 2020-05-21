@@ -15,7 +15,7 @@
           <p>City: N/A</p>
         <%end %>
         <!--  date created-->
-        <p>Date Created: <%= @user.date_created.strftime('%d-%m-%Y') %></p>
+        <p>Date Created: <%= @user.created_at.try(:strftime, ('%d-%m-%Y')) %></p>
       </center>
     </div>
   </div>
