@@ -1,14 +1,22 @@
 <% provide(:title, @user.name) %>
 <div>
-<!--  image and username-->
-<h1> <%= gravatar_for @user %>
-  <%= @user.username %></h1>
-<!--  get user city, display N/A if nil-->
-  <%if @user.city != nil %>
-  <p>City: <%= @user.city %></p>
-    <%else %>
-    <p>City: N/A</p>
-    <%end %>
+
+
+  <div class="container">
+    <div class="span3 well">
+      <center>
+        <%= gravatar_for @user %>
+        <h3> <%= @user.username %></h3>
+        <!--  get user city, display N/A if nil-->
+        <%if @user.city != nil %>
+          <p>City: <%= @user.city %></p>
+        <%else %>
+          <p>City: N/A</p>
+        <%end %>
+        <p>Date Created: <%= @user.date_created.strftime('%d-%m-%Y') %></p>
+
+      </center>
+    </div>
 
 <!--  date created-->
   <p>Date Created: <%= @user.date_created %></p>
