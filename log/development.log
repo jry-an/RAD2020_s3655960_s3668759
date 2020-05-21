@@ -35099,3 +35099,464 @@ Processing by DiscussionsController#index as HTML
 Completed 200 OK in 691ms (Views: 606.0ms | ActiveRecord: 30.9ms)
 
 
+Started GET "/" for 172.18.0.1 at 2020-05-21 01:57:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  Rendered discussions/_buttons.html.erb (0.7ms)
+  [1m[36mDiscussion Load (3.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (13.3ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:22
+  [1m[36mTopic Load (3.9ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  Rendered discussions/_sidebar.html.erb (34.6ms)
+  Rendered discussions/index.html.erb within layouts/application (117.2ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 526ms (Views: 448.8ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 01:57:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (38.0ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 237ms (Views: 202.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/signup" for 172.18.0.1 at 2020-05-21 01:57:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (29.1ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 213ms (Views: 151.8ms | ActiveRecord: 13.2ms)
+
+
+Started POST "/signup" for 172.18.0.1 at 2020-05-21 01:57:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W65yK3uY4nWHU5XGvjuoIvNdLqxtWxb6Uf8OH6E1sPnMAgbSNUDJMLOjk0GOOdWoySZ5iz4YjYknX/H77T6vfg==", "user"=>{"username"=>"Jack", "email"=>"jack@nobody.com", "mobile_number"=>"0404026944", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Unpermitted parameter: :mobile_number
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Exists (4.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "jack@nobody.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "username", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jack@nobody.com"], ["created_at", "2020-05-21 01:57:23.458341"], ["updated_at", "2020-05-21 01:57:23.458341"], ["username", "Jack"], ["password_digest", "$2a$12$qvWQt3hbiG0m68YS0eUe8.HaTQdZM2lrNIvb8IgudcWOi6kjOj99u"]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:17
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 253ms (ActiveRecord: 21.8ms)
+
+
+Started GET "/users/1" for 172.18.0.1 at 2020-05-21 01:57:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 163ms (Views: 115.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 172.18.0.1 at 2020-05-21 01:57:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  Rendered discussions/_buttons.html.erb (0.3ms)
+  [1m[36mDiscussion Load (2.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (6.2ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:22
+  [1m[36mTopic Load (3.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  Rendered discussions/_sidebar.html.erb (19.7ms)
+  Rendered discussions/index.html.erb within layouts/application (93.1ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 255ms (Views: 219.7ms | ActiveRecord: 10.7ms)
+
+
+Started DELETE "/logout" for 172.18.0.1 at 2020-05-21 02:14:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U2PRbT42Ow7I6XEiOcNFO4tIQl5mTDc/h42f3EN0XoAUyLs5rOFMxFV52+eWw3UzICrBmsqzZWUqU6vC1biW/Q=="}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 172.18.0.1 at 2020-05-21 02:14:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  Rendered discussions/_buttons.html.erb (0.3ms)
+  [1m[36mDiscussion Load (2.1ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/shared/_discussions.html.erb:7
+  Rendered shared/_discussions.html.erb (5.0ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:22
+  [1m[36mTopic Load (2.9ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  Rendered discussions/_sidebar.html.erb (14.6ms)
+  Rendered discussions/index.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 191ms (Views: 163.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:14:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (157.7ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00007f7419176328>):
+     5:     <%= form_for(:session, url: login_path) do |f| %>
+     6:       <div class="field">
+     7:         <div class="control">
+     8:           <%= f.input :email, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+     9:         </div>
+    10:       </div>
+    11: 
+  
+app/views/sessions/new.html.erb:8:in `block in _app_views_sessions_new_html_erb___1717011134822019279_70068198379860'
+app/views/sessions/new.html.erb:5:in `_app_views_sessions_new_html_erb___1717011134822019279_70068198379860'
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:28:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 4336ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Undefined mixin 'box_sizing'.):
+     6: 
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:   </head>
+  
+app/assets/stylesheets/_custom.scss:5:in `box_sizing'
+app/assets/stylesheets/_custom.scss:5
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2162936767631015115_70068265009660'
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:28:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 3542ms (Views: 3457.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:33:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 4802ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /myapp/app/assets/config
+  /myapp/app/assets/images
+  /myapp/app/assets/javascripts
+  /myapp/app/assets/stylesheets
+  /usr/local/bundle/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /usr/local/bundle/gems/bulma-rails-0.6.2/app/assets/stylesheets
+  /usr/local/bundle/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/bundle/gems/actioncable-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/activestorage-5.2.4.2/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /myapp/node_modules):
+     6: 
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:   </head>
+  
+app/assets/stylesheets/_custom.scss:1
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2162936767631015115_70068065061860'
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:36:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 444ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /myapp/app/assets/config
+  /myapp/app/assets/images
+  /myapp/app/assets/javascripts
+  /myapp/app/assets/stylesheets
+  /usr/local/bundle/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /usr/local/bundle/gems/bulma-rails-0.6.2/app/assets/stylesheets
+  /usr/local/bundle/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/bundle/gems/actioncable-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/activestorage-5.2.4.2/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /myapp/node_modules):
+     6: 
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:   </head>
+  
+app/assets/stylesheets/_custom.scss:1
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2162936767631015115_70068308078860'
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:37:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 912ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /myapp/app/assets/config
+  /myapp/app/assets/images
+  /myapp/app/assets/javascripts
+  /myapp/app/assets/stylesheets
+  /usr/local/bundle/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /usr/local/bundle/gems/bulma-rails-0.6.2/app/assets/stylesheets
+  /usr/local/bundle/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/bundle/gems/actioncable-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/activestorage-5.2.4.2/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /myapp/node_modules):
+     6: 
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:   </head>
+  
+app/assets/stylesheets/_custom.scss:1
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2162936767631015115_70068065662820'
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:44:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 361ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /myapp/app/assets/config
+  /myapp/app/assets/images
+  /myapp/app/assets/javascripts
+  /myapp/app/assets/stylesheets
+  /usr/local/bundle/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /usr/local/bundle/gems/bulma-rails-0.6.2/app/assets/stylesheets
+  /usr/local/bundle/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/bundle/gems/actioncable-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/activestorage-5.2.4.2/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-5.2.4.2/lib/assets/compiled
+  /usr/local/bundle/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /myapp/node_modules):
+     6: 
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:   </head>
+  
+app/assets/stylesheets/_custom.scss:1
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2162936767631015115_70068272583240'
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:49:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 8437ms (Views: 8412.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.18.0.1 at 2020-05-21 02:50:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 202ms (Views: 146.9ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:50:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 200ms (Views: 183.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:51:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 167ms (Views: 144.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:52:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 241ms (Views: 209.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:52:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 278ms (Views: 244.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:52:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 213ms (Views: 183.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:52:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 226ms (Views: 197.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:52:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 219ms (Views: 192.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:53:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 234ms (Views: 201.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:53:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 230ms (Views: 202.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:53:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 221ms (Views: 192.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:53:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 228ms (Views: 200.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.18.0.1 at 2020-05-21 02:53:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 259ms (Views: 232.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.18.0.1 at 2020-05-21 02:54:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 237ms (Views: 213.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.18.0.1 at 2020-05-21 02:54:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 288ms (Views: 261.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.18.0.1 at 2020-05-21 02:55:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 276ms (Views: 242.6ms | ActiveRecord: 0.0ms)
+
+

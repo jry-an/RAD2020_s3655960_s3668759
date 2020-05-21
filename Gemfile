@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Required gems for our news application
 gem 'bulma-rails', '~> 0.6.2'
 gem 'simple_form'
+gem 'bootstrap-sass', '3.3.7'
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
