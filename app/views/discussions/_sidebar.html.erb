@@ -1,0 +1,76 @@
+<%# Bulma is being used below %>
+
+<div class="column is-3 is-offset-1">
+
+  <h3 class="title is-5 has-text-grey-light">Recent Members</h3>
+        <table>
+          <tr>
+            <% Array(User.all.order('last_seen_at desc')[0..3]).each do |d| %>
+          <td>
+            <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20 ), d %>
+              Name: <%=link_to d.username, d %>
+            </td>
+            <% end %>
+              <tr>
+                <% Array(User.all.order('last_seen_at desc')[4..7]).each do |d| %>
+                  <td>
+                    <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20), d %>
+                    Name: <%=link_to d.username, d %>
+                  </td>
+                <% end %>
+                <tr>
+                  <% Array(User.all.order('last_seen_at desc')[8..11]).each do |d| %>
+                    <td>
+                      <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20), d %>
+                      Name: <%=link_to d.username, d %>
+                    </td>
+                  <%end%>
+                </tr>
+        </table>
+  <br/>
+  <br/>
+  <br/>
+
+
+  <h3 class="title is-5 has-text-grey-light">Topics</h3>
+
+  <ul class="list">
+    <% @topics.each do |t| %>
+    <li><%= link_to t.topic, t %></li>
+    <% end %>
+  </ul>
+
+  <br/>
+
+  <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
+
+  <%# Only allow users with admin status to create new topics %>
+  <%# Will be added later on %>
+  
+  <br/>
+  <br/>
+  <br/>
+  <h3 class="title is-5 has-text-grey-light">Top Posts</h3>
+  <ul class="list">
+    <!--  This reverses the array and gets the top 5 posts-->
+    <% @discussions.sort_by{|d| d[:view_count]}.reverse[0..4].each do |d| %>
+      <li><%= link_to d.title, d %> <%= d.view_count %></li>
+    <% end %>
+  </ul>
+
+  <br/>
+  <br/>
+  <br/>
+  <h3 class="title is-5 has-text-grey-light">Links</h3>
+  <ul>
+    <li><a href="http://www.google.com">Google</a></li>
+    <li><a href="https://www.rmit.edu.au/">RMIT</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+
+  </ul>
+
+
+</div>
+
+
+

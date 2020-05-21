@@ -1,0 +1,17 @@
+<%# This file is for rending the text area and button for making a 
+<%# reply within a discussion %>
+
+<%# Pass the discussion and replies into the simple form,
+<%# remote true allows us to see the replies without refreshing the page %>
+<%= simple_form_for([@discussion, @discussion.replies.build], remote: true) do |f| %>
+
+<div class = "field">
+	<div class = "control">
+		<%# Loop through the replies and display each %>
+		<%= f.input :reply, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' } %>
+	</div>
+</div>
+
+<%= f.button :submit, 'Leave a reply', class: 'button is-info' %>
+
+<% end %>

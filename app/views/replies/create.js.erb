@@ -1,0 +1,4 @@
+$("<%= escape_javascript(render(@reply)) %>").appendTo('#discussion-replies');
+<%# This allows us to instantly see replies made to the discussion rather %>
+<%# than having to manually refresh the page %>
+<%# This references the div id 'discussion-replies' in the views/discussions/show.html.erb file %>
