@@ -30,7 +30,6 @@
   <p>Topic: <%= link_to user_discuss.title, user_discuss%></p>
     <p>Content: <%= user_discuss.content%></p>
     <p>Created: <%= user_discuss.created_at%></p>
-    <br>
           <hr class="solid">
       <%end %>
       </div>
@@ -46,9 +45,9 @@
     <% all_discuss.replies.each do |c|%>
 <!--        if reply username same as current user show reply-->
       <%if c.user.username == @user.username %>
-       <p>Recent Comment: <%= link_to c.reply, all_discuss %></p>
-          <p>Comments Time: <%= c.created_at %></p>
-          <p>Comment on Post: <%= link_to all_discuss.title, all_discuss %></p>
+       <p>Recent Comment: "<%= link_to c.reply, all_discuss %>"</p>
+          <p>Time Posted: <%= c.created_at %></p>
+          <p>On Discussion: <%= link_to all_discuss.title, all_discuss %></p>
               <hr class="solid">
       <%end %>
       <%end %>
