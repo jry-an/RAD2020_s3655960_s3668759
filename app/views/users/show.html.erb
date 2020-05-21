@@ -3,9 +3,10 @@
 
 
   <div class="container">
-    <div class="span3 well">
+    <div class="d-flex justify-content-center h-100">
       <center>
         <%= gravatar_for @user %>
+        <br>
         <h3> <%= @user.username %></h3>
         <!--  get user city, display N/A if nil-->
         <%if @user.city != nil %>
@@ -13,14 +14,16 @@
         <%else %>
           <p>City: N/A</p>
         <%end %>
+        <!--  date created-->
         <p>Date Created: <%= @user.date_created.strftime('%d-%m-%Y') %></p>
-
       </center>
     </div>
+  </div>
 
-<!--  date created-->
-  <p>Date Created: <%= @user.date_created %></p>
   <br>
+    <div class="row">
+      <div class="column">
+
 <!--  show discussions - start of user discussions loop-->
   <p style="font-family: bold,'Arial Black'">Recent Posts</p>
   <%@user.discussions.order('created_at desc').each do |user_discuss| %>
@@ -28,7 +31,12 @@
     <p>Content: <%= user_discuss.content%></p>
     <p>Created: <%= user_discuss.created_at%></p>
     <br>
-  <%end %>
+          <hr class="solid">
+      <%end %>
+      </div>
+
+      <div class="column">
+
 
 <!--    show user comments-->
     <p style="font-family: bold,'Arial Black'">Recent Comments</p>
@@ -41,10 +49,12 @@
        <p>Recent Comment: <%= link_to c.reply, all_discuss %></p>
           <p>Comments Time: <%= c.created_at %></p>
           <p>Comment on Post: <%= link_to all_discuss.title, all_discuss %></p>
-        <%end %>
+              <hr class="solid">
       <%end %>
-    <%end %>
-
+      <%end %>
+      <%end %>
+      </div>
+    </div>
 <!--    end discussion loop-->
 
 </div>

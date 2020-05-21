@@ -41207,3 +41207,1023 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 250ms (Views: 203.1ms | ActiveRecord: 19.0ms)
 
 
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:52:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (4.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mDiscussion Load (11.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mReply Load (8.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:40
+  Rendered users/show.html.erb within layouts/application (98.7ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 588ms (Views: 458.8ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:52:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (3.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mReply Load (3.7ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:41
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:43
+  Rendered users/show.html.erb within layouts/application (44.4ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 380ms (Views: 312.2ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:53:19 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (2.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:28
+  [1m[36mDiscussion Load (3.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mReply Load (2.7ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:40
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:42
+  Rendered users/show.html.erb within layouts/application (25.8ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 233ms (Views: 193.9ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:53:25 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (4.0ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mDiscussion Load (3.0ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mReply Load (4.0ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:40
+  Rendered users/show.html.erb within layouts/application (32.5ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 276ms (Views: 233.0ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:53:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.9ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:25
+  [1m[36mDiscussion Load (8.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mReply Load (5.8ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:37
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (66.3ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 416ms (Views: 341.7ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:53:55 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (2.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mDiscussion Load (3.1ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mReply Load (2.2ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:40
+  Rendered users/show.html.erb within layouts/application (26.1ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 234ms (Views: 195.3ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:54:03 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.9ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:27
+  [1m[36mDiscussion Load (2.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:37
+  [1m[36mReply Load (2.7ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:41
+  Rendered users/show.html.erb within layouts/application (30.5ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 282ms (Views: 235.9ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:54:09 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:27
+  [1m[36mDiscussion Load (2.6ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:37
+  [1m[36mReply Load (2.7ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:41
+  Rendered users/show.html.erb within layouts/application (30.1ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 273ms (Views: 227.2ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:56:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (2.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:28
+  [1m[36mDiscussion Load (3.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:42
+  [1m[36mReply Load (2.3ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:46
+  Rendered users/show.html.erb within layouts/application (30.5ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 264ms (Views: 218.2ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:56:42 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (4.9ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:28
+  [1m[36mDiscussion Load (3.0ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:42
+  [1m[36mReply Load (3.6ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:46
+  Rendered users/show.html.erb within layouts/application (41.1ms)
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 4903ms (Views: 4848.2ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:58:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (2.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:43
+  [1m[36mReply Load (8.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:45
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (38.1ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 277ms (Views: 228.2ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 08:59:12 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (4.9ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (4.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:43
+  [1m[36mReply Load (2.7ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:45
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (38.1ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 346ms (Views: 284.9ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 09:00:48 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (4.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (3.6ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (2.8ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (35.9ms)
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 3862ms (Views: 3806.1ms | ActiveRecord: 25.2ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 09:01:02 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (2.8ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (2.6ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (30.2ms)
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 328ms (Views: 274.1ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/" for 172.20.0.1 at 2020-05-21 09:01:09 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  Rendered discussions/_buttons.html.erb (0.5ms)
+  [1m[36mDiscussion Load (2.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE (created_at > '2020-04-21 09:01:09.030367')[0m
+  ↳ app/views/shared/_discussions.html.erb:10
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:14
+  [1m[36mTopic Load (3.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:26
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "Jack"], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:31
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/shared/_discussions.html.erb:43
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered shared/_discussions.html.erb (47.4ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (2.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  Rendered discussions/_sidebar.html.erb (29.7ms)
+  Rendered discussions/index.html.erb within layouts/application (154.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 373ms (Views: 315.7ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/discussions/new" for 172.20.0.1 at 2020-05-21 09:01:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (3.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (77.8ms)
+  Rendered discussions/new.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 375ms (Views: 336.3ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/discussions" for 172.20.0.1 at 2020-05-21 09:01:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amuU9iMEJmKZfVFIcbFPz860qckg92DY1Z7a6n/MzqwLP6SjaE2+VTwzC5Gql7hfpDDnjH9CkIVquIEiLKt8Qw==", "discussion"=>{"title"=>"Tips on playing Tracer", "content"=>"Help", "topic_id"=>"1"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/discussions_controller.rb:44
+  [1m[36mTopic Load (2.9ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:44
+  [1m[36mDiscussion Create (7.9ms)[0m  [1m[32mINSERT INTO "discussions" ("title", "content", "created_at", "updated_at", "user_id", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Tips on playing Tracer"], ["content", "Help"], ["created_at", "2020-05-21 09:01:23.595979"], ["updated_at", "2020-05-21 09:01:23.595979"], ["user_id", 4], ["topic_id", 1]]
+  ↳ app/controllers/discussions_controller.rb:44
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/discussions_controller.rb:44
+Redirected to http://localhost:3000/discussions/2
+Completed 302 Found in 44ms (ActiveRecord: 22.6ms)
+
+
+Started GET "/discussions/2" for 172.20.0.1 at 2020-05-21 09:01:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDiscussion Load (4.9ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:81
+  [1m[35m (6.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/discussion.rb:16
+  [1m[36mTopic Load (7.8ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mDiscussion Update (6.1ms)[0m  [1m[33mUPDATE "discussions" SET "view_count" = $1, "updated_at" = $2 WHERE "discussions"."id" = $3[0m  [["view_count", 1], ["updated_at", "2020-05-21 09:01:23.727170"], ["id", 2]]
+  ↳ app/models/discussion.rb:16
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/discussion.rb:16
+  Rendering discussions/show.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/discussions/show.html.erb:22
+  [1m[36mReply Load (3.5ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/discussions/show.html.erb:27
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered replies/_form.html.erb (79.1ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (5.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  [1m[36mDiscussion Load (3.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:75
+  Rendered discussions/_sidebar.html.erb (56.0ms)
+  Rendered discussions/show.html.erb within layouts/application (242.8ms)
+Completed 200 OK in 661ms (Views: 504.1ms | ActiveRecord: 62.1ms)
+
+
+Started POST "/discussions/2/replies" for 172.20.0.1 at 2020-05-21 09:01:29 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RepliesController#create as JS
+  Parameters: {"utf8"=>"✓", "reply"=>{"reply"=>"Git good"}, "commit"=>"Leave a reply", "discussion_id"=>"2"}
+  [1m[36mDiscussion Load (2.8ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/replies_controller.rb:79
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/replies_controller.rb:13
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/replies_controller.rb:13
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/replies_controller.rb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/replies_controller.rb:19
+  [1m[36mReply Create (3.9ms)[0m  [1m[32mINSERT INTO "replies" ("reply", "created_at", "updated_at", "discussion_id", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["reply", "Git good"], ["created_at", "2020-05-21 09:01:30.092191"], ["updated_at", "2020-05-21 09:01:30.092191"], ["discussion_id", 2], ["user_id", 4]]
+  ↳ app/controllers/replies_controller.rb:19
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/replies_controller.rb:19
+  Rendering replies/create.js.erb
+  Rendered replies/_reply.html.erb (2.4ms)
+  Rendered replies/create.js.erb (43.2ms)
+Completed 200 OK in 226ms (Views: 143.7ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/" for 172.20.0.1 at 2020-05-21 09:01:31 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  Rendered discussions/_buttons.html.erb (0.4ms)
+  [1m[36mDiscussion Load (3.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE (created_at > '2020-04-21 09:01:31.193226')[0m
+  ↳ app/views/shared/_discussions.html.erb:10
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:14
+  [1m[36mTopic Load (2.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:26
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "Jack"], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:31
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/shared/_discussions.html.erb:43
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:14
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:26
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "John"], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:31
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/shared/_discussions.html.erb:43
+  Rendered shared/_discussions.html.erb (70.7ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (2.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  Rendered discussions/_sidebar.html.erb (42.1ms)
+  Rendered discussions/index.html.erb within layouts/application (184.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 397ms (Views: 342.1ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/users/4" for 172.20.0.1 at 2020-05-21 09:01:33 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (2.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (3.6ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (2.3ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mReply Load (2.8ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (42.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 262ms (Views: 216.2ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 09:01:44 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (2.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (2.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (2.6ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mReply Load (2.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (38.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 263ms (Views: 216.6ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/users/1" for 172.20.0.1 at 2020-05-21 09:02:08 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (4.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (3.0ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (2.9ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mReply Load (3.3ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (49.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 298ms (Views: 246.8ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/users/4" for 172.20.0.1 at 2020-05-21 09:02:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (2.9ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (2.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (2.0ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mReply Load (2.3ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (39.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 240ms (Views: 194.0ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for 172.20.0.1 at 2020-05-21 09:02:16 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  Rendered discussions/_buttons.html.erb (0.6ms)
+  [1m[36mDiscussion Load (2.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE (created_at > '2020-04-21 09:02:16.117941')[0m
+  ↳ app/views/shared/_discussions.html.erb:10
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:14
+  [1m[36mTopic Load (3.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:26
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "Jack"], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:31
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/shared/_discussions.html.erb:43
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:14
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:26
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "John"], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:31
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/shared/_discussions.html.erb:43
+  Rendered shared/_discussions.html.erb (75.1ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (4.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  Rendered discussions/_sidebar.html.erb (27.5ms)
+  Rendered discussions/index.html.erb within layouts/application (172.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 362ms (Views: 309.8ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/users/4" for 172.20.0.1 at 2020-05-21 09:02:22 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (2.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (2.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mReply Load (2.5ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (35.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 208ms (Views: 169.7ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for 172.20.0.1 at 2020-05-21 09:02:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#index as HTML
+  Rendering discussions/index.html.erb within layouts/application
+  Rendered discussions/_buttons.html.erb (0.4ms)
+  [1m[36mDiscussion Load (2.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE (created_at > '2020-04-21 09:02:23.877869')[0m
+  ↳ app/views/shared/_discussions.html.erb:10
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:14
+  [1m[36mTopic Load (2.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:26
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "Jack"], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:31
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/shared/_discussions.html.erb:43
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:14
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:26
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "John"], ["LIMIT", 1]]
+  ↳ app/views/shared/_discussions.html.erb:31
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/shared/_discussions.html.erb:43
+  Rendered shared/_discussions.html.erb (47.9ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (2.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  Rendered discussions/_sidebar.html.erb (23.5ms)
+  Rendered discussions/index.html.erb within layouts/application (126.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 289ms (Views: 247.5ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/discussions/new" for 172.20.0.1 at 2020-05-21 09:02:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (2.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (38.6ms)
+  Rendered discussions/new.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 232ms (Views: 202.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/discussions/1" for 172.20.0.1 at 2020-05-21 09:02:39 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDiscussion Load (3.3ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:81
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/discussion.rb:16
+  [1m[36mTopic Load (3.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mDiscussion Update (2.7ms)[0m  [1m[33mUPDATE "discussions" SET "view_count" = $1, "updated_at" = $2 WHERE "discussions"."id" = $3[0m  [["view_count", 10], ["updated_at", "2020-05-21 09:02:39.497927"], ["id", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/discussion.rb:16
+  Rendering discussions/show.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/discussions/show.html.erb:22
+  [1m[36mReply Load (2.4ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/discussions/show.html.erb:27
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/replies/_reply.html.erb:7
+  Rendered collection of replies/_reply.html.erb [1 times] (11.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered replies/_form.html.erb (11.2ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (2.9ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  [1m[36mDiscussion Load (2.9ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:75
+  Rendered discussions/_sidebar.html.erb (36.6ms)
+  Rendered discussions/show.html.erb within layouts/application (140.2ms)
+Completed 200 OK in 374ms (Views: 295.3ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/discussions/1" for 172.20.0.1 at 2020-05-21 09:02:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDiscussion Load (3.3ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:81
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/discussion.rb:16
+  [1m[36mTopic Load (2.7ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mDiscussion Update (2.9ms)[0m  [1m[33mUPDATE "discussions" SET "view_count" = $1, "updated_at" = $2 WHERE "discussions"."id" = $3[0m  [["view_count", 11], ["updated_at", "2020-05-21 09:02:51.361825"], ["id", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/discussion.rb:16
+  Rendering discussions/show.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/discussions/show.html.erb:22
+  [1m[36mReply Load (2.4ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/discussions/show.html.erb:27
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/replies/_reply.html.erb:7
+  Rendered collection of replies/_reply.html.erb [1 times] (8.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered replies/_form.html.erb (12.4ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (3.0ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  [1m[36mDiscussion Load (3.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:75
+  Rendered discussions/_sidebar.html.erb (39.5ms)
+  Rendered discussions/show.html.erb within layouts/application (159.3ms)
+Completed 200 OK in 411ms (Views: 325.9ms | ActiveRecord: 40.2ms)
+
+
+Started POST "/discussions/1/replies" for 172.20.0.1 at 2020-05-21 09:02:56 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RepliesController#create as JS
+  Parameters: {"utf8"=>"✓", "reply"=>{"reply"=>"YO!!!!!"}, "commit"=>"Leave a reply", "discussion_id"=>"1"}
+  [1m[36mDiscussion Load (2.5ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/replies_controller.rb:79
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/replies_controller.rb:13
+  [1m[35m (2.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/replies_controller.rb:13
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/replies_controller.rb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/replies_controller.rb:19
+  [1m[36mReply Create (2.5ms)[0m  [1m[32mINSERT INTO "replies" ("reply", "created_at", "updated_at", "discussion_id", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["reply", "YO!!!!!"], ["created_at", "2020-05-21 09:02:56.853602"], ["updated_at", "2020-05-21 09:02:56.853602"], ["discussion_id", 1], ["user_id", 4]]
+  ↳ app/controllers/replies_controller.rb:19
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/replies_controller.rb:19
+  Rendering replies/create.js.erb
+  Rendered replies/_reply.html.erb (2.2ms)
+  Rendered replies/create.js.erb (37.1ms)
+Completed 200 OK in 184ms (Views: 116.3ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/users/4" for 172.20.0.1 at 2020-05-21 09:02:59 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (3.0ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (4.7ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (3.8ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mReply Load (2.3ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (49.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 247ms (Views: 198.3ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/discussions/new" for 172.20.0.1 at 2020-05-21 09:03:05 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#new as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering discussions/new.html.erb within layouts/application
+  [1m[36mTopic Load (2.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_form.html.erb:22
+  Rendered discussions/_form.html.erb (39.1ms)
+  Rendered discussions/new.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 269ms (Views: 238.5ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/discussions" for 172.20.0.1 at 2020-05-21 09:03:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d8y4Azp7wcOKn47i9UpDQUAkOJfCsFTc/j94dO9bOEUWmIhWcTJZ9C/R1DsubLTRKqB20p0FpIFBGSO8vDyKqg==", "discussion"=>{"title"=>"OK we need to oasd", "content"=>"sadasdsa", "topic_id"=>"1"}, "commit"=>"Create Discussion"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/discussions_controller.rb:44
+  [1m[36mTopic Load (2.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:44
+  [1m[36mDiscussion Create (2.8ms)[0m  [1m[32mINSERT INTO "discussions" ("title", "content", "created_at", "updated_at", "user_id", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "OK we need to oasd"], ["content", "sadasdsa"], ["created_at", "2020-05-21 09:03:11.638770"], ["updated_at", "2020-05-21 09:03:11.638770"], ["user_id", 4], ["topic_id", 1]]
+  ↳ app/controllers/discussions_controller.rb:44
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/discussions_controller.rb:44
+Redirected to http://localhost:3000/discussions/3
+Completed 302 Found in 35ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/discussions/3" for 172.20.0.1 at 2020-05-21 09:03:11 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DiscussionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDiscussion Load (2.9ms)[0m  [1m[34mSELECT  "discussions".* FROM "discussions" WHERE "discussions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/discussions_controller.rb:81
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/discussion.rb:16
+  [1m[36mTopic Load (2.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/discussion.rb:16
+  [1m[36mDiscussion Update (3.5ms)[0m  [1m[33mUPDATE "discussions" SET "view_count" = $1, "updated_at" = $2 WHERE "discussions"."id" = $3[0m  [["view_count", 1], ["updated_at", "2020-05-21 09:03:11.715419"], ["id", 3]]
+  ↳ app/models/discussion.rb:16
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/discussion.rb:16
+  Rendering discussions/show.html.erb within layouts/application
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 3]]
+  ↳ app/views/discussions/show.html.erb:22
+  [1m[36mReply Load (2.3ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 3]]
+  ↳ app/views/discussions/show.html.erb:27
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered replies/_form.html.erb (14.2ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY last_seen_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:45
+  [1m[36mTopic Load (3.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:59
+  [1m[36mDiscussion Load (3.1ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/discussions/_sidebar.html.erb:75
+  Rendered discussions/_sidebar.html.erb (44.9ms)
+  Rendered discussions/show.html.erb within layouts/application (135.4ms)
+Completed 200 OK in 403ms (Views: 325.5ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/users/4" for 172.20.0.1 at 2020-05-21 09:03:13 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDiscussion Load (2.9ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."user_id" = $1 ORDER BY created_at desc[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDiscussion Load (3.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" ORDER BY created_at desc[0m
+  ↳ app/views/users/show.html.erb:44
+  [1m[36mReply Load (3.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 3]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mReply Load (2.7ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 2]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mReply Load (3.5ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."discussion_id" = $1[0m  [["discussion_id", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:48
+  Rendered users/show.html.erb within layouts/application (60.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 200 OK in 271ms (Views: 222.9ms | ActiveRecord: 24.4ms)
+
+
