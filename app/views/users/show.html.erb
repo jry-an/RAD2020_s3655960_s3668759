@@ -5,7 +5,7 @@
   <%= @user.username %></h1>
 <!--  get user city, display N/A if nil-->
   <%if @user.city != nil %>
-  <p>City<%= @user.city %></p>
+  <p>City: <%= @user.city %></p>
     <%else %>
     <p>City: N/A</p>
     <%end %>
@@ -13,30 +13,30 @@
 <!--  date created-->
   <p>Date Created: <%= @user.date_created %></p>
   <br>
-<!--  show discussions - start of discussions loop-->
+<!--  show discussions - start of user discussions loop-->
   <p style="font-family: bold,'Arial Black'">Recent Posts</p>
-  <%@user.discussions.order('created_at desc').each do |d| %>
-  <p>Topic: <%= link_to d.title, d%></p>
-    <p>Content: <%= d.content%></p>
-    <p>Created: <%= d.created_at%></p>
+  <%@user.discussions.order('created_at desc').each do |user_discuss| %>
+  <p>Topic: <%= link_to user_discuss.title, user_discuss%></p>
+    <p>Content: <%= user_discuss.content%></p>
+    <p>Created: <%= user_discuss.created_at%></p>
     <br>
+  <%end %>
 
 <!--    show user comments-->
     <p style="font-family: bold,'Arial Black'">Recent Comments</p>
-<!--    loops through discussion-->
-    <%Discussion.all.order('created_at desc').each do |r| %>
+<!--    loops through global discussions-->
+    <%Discussion.all.order('created_at desc').each do |all_discuss| %>
 <!--      loops through each discussion reply-->
-    <% d.replies.each do |c|%>
+    <% all_discuss.replies.each do |c|%>
 <!--        if reply username same as current user show reply-->
       <%if c.user.username == @user.username %>
-       <p>Recent Comment: <%= link_to c.reply, d %></p>
+       <p>Recent Comment: <%= link_to c.reply, all_discuss %></p>
           <p>Comments Time: <%= c.created_at %></p>
-          <p>Comment on Post: <%= link_to r.title, r %></p>
+          <p>Comment on Post: <%= link_to all_discuss.title, all_discuss %></p>
         <%end %>
       <%end %>
     <%end %>
 
 <!--    end discussion loop-->
-  <%end %>
 
 </div>
