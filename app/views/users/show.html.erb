@@ -7,7 +7,7 @@
       <center>
         <%= gravatar_for @user %>
         <br>
-        <h3> <%= @user.username %></h3>
+        <h3 style="font-family: bold, 'Arial Black'"> <%= @user.username %></h3>
         <!--  get user city, display N/A if nil-->
         <%if @user.city != nil %>
           <p>City: <%= @user.city %></p>
