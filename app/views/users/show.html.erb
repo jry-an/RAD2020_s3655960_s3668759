@@ -7,7 +7,8 @@
 <!--  date created-->
   <p>Date Created: <%= @user.date_created %></p>
   <br>
-<!--  show discussions-->
+<!--  show discussions - start of discussions loop-->
+  <p style="font-family: bold,'Arial Black'">Recent Posts</p>
   <%@user.discussions.order('created_at desc').each do |d| %>
   <p>Topic: <%= link_to d.title, d%></p>
     <p>Content: <%= d.content%></p>
@@ -15,17 +16,21 @@
     <br>
 
 <!--    show user comments-->
+    <p style="font-family: bold,'Arial Black'">Recent Comments</p>
+<!--    loops through discussion-->
     <%Discussion.all.order('created_at desc').each do |r| %>
+<!--      loops through each discussion reply-->
     <% d.replies.each do |c|%>
+<!--        if reply username same as current user show reply-->
       <%if c.user.username == @user.username %>
-       <p>Recent Comments: <%= link_to c.reply, d %></p>
+       <p>Recent Comment: <%= link_to c.reply, d %></p>
           <p>Comments Time: <%= c.created_at %></p>
           <p>Comment on Post: <%= link_to r.title, r %></p>
-<%end %>
+        <%end %>
       <%end %>
     <%end %>
 
-
+<!--    end discussion loop-->
   <%end %>
 
 </div>
