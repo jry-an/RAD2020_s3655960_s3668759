@@ -31,3 +31,13 @@
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
 }
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.section {
+  flex: 1;
+}

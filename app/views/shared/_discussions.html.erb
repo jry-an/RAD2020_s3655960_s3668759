@@ -1,7 +1,10 @@
 <%# Bulma is heavily used below to create the view %>
 
 <div class="column is-8">
-  <h3 class="title is-5 has-text-grey-light">Latest News</h3>
+  <%= link_to 'Recent Posts', new_discussion_path, class:"button is-info" %>
+  <br>
+  <br>
+  <%# <h3 class="title is-5 has-text-grey-light">Latest News</h3> %>
   <div class="discussions">
     <%# For each discussion, load it %>
     <% @discussions.each do |discussion| %>
