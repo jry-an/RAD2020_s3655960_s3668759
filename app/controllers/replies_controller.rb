@@ -7,6 +7,7 @@ class RepliesController < ApplicationController
 	# Find the discussion for each of the views (create, edit, show, update, destroy)
 	before_action :set_discussion, only: [:create, :edit, :show, :update, :destroy]
 
+
 	# method for creating a new reply
 	def create
 		# Creates a reply within a discussion 

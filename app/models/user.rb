@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :discussions
+  has_many :replies, through: :discussions
 
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
@@ -10,7 +11,7 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false }
   has_secure_password
   VALID_PASSWORD_REGEX = /\A[a-zA-Z0-9 ]+\z/
-  validates :password, presence: true, length: { minimum: 8, maximum: 20 }, format: {with: VALID_PASSWORD_REGEX}
+  validates :password, presence: true, length: { minimum: 8, maximum: 20 }, format: {with: VALID_PASSWORD_REGEX}, allow_nil: true
   validates :mobile_number, presence: true, length: {minimum: 10, maximum: 13}, numericality: {only_integer: true}
   # Returns the hash digest of the given string.
   def User.digest(string)

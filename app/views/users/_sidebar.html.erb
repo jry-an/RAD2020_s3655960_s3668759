@@ -7,19 +7,19 @@
     </p>
     <ul class="menu-list">
         <li>
-            <%= link_to 'My Profile', root_path, class:"navbar-item" %>
+            <%= link_to 'My Profile', user_path(current_user), class:"navbar-item" %>
         </li>
         <li>
-            <%= link_to 'My Posts', root_path, class:"navbar-item" %>
+            <%= link_to 'My Posts', custom_user_posts_path(current_user), class:"navbar-item" %>
         </li>
         <li>
-            <%= link_to 'My Comments', root_path, class:"navbar-item" %>
+            <%= link_to 'My Comments', custom_user_replies_path(current_user), class:"navbar-item" %>
         </li>
         <li>
             <%= link_to 'Comments to Me', root_path, class:"navbar-item" %>
         </li>
         <li>
-            <%= link_to 'Settings', root_path, class:"navbar-item" %>
+          <%= link_to "Settings", edit_user_path(current_user) %>
         </li>
     </ul>
     </aside>

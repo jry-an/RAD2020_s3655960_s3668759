@@ -47,21 +47,7 @@
     <div class="column">
 
 
-      <!--    show user comments-->
-      <p style="font-family: bold,'Arial Black'">Recent Comments</p>
-      <!--    loops through global discussions-->
-      <%Discussion.all.order('created_at desc').each do |all_discuss| %>
-        <!--      loops through each discussion reply-->
-        <% all_discuss.replies.each do |c|%>
-          <!--        if reply username same as current user show reply-->
-          <%if c.user.username == @user.username %>
-            <p>Recent Comment: "<%= link_to c.reply, all_discuss %>"</p>
-            <p>Time Posted: <%= c.created_at %></p>
-            <p>On Discussion: <%= link_to all_discuss.title, all_discuss %></p>
-            <hr class="solid">
-          <%end %>
-        <%end %>
-      <%end %>
+     <%= render 'replies' %>
       <!--    end discussion loop-->
 
     </div>
