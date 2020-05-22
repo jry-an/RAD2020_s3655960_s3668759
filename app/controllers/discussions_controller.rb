@@ -11,7 +11,8 @@ class DiscussionsController < ApplicationController
   # GET /discussions.json
   def index
     # returns a list of discussions where the creation date is within the last 30 days
-    @discussions = Discussion.where('created_at > ?', 30.days.ago).order('created_at desc')
+    # @discussions = Discussion.where('created_at > ?', 30.days.ago).order('created_at desc')
+    @discussions = Discussion.all.order('created_at desc')
   end
 
   # GET /discussions/1

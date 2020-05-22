@@ -53,16 +53,14 @@
   <br/>
   <br/>
 
-  <h3 class="title is-5 has-text-grey-light">Topics</h3>
+  <%= link_to 'Topics', topics_path, class: 'title is-5 has-text-grey-light' %>
+  <br>
+  <br>
   <div class="buttons">
-    <ul class="list">
       <% @topics.each do |t| %>
-      <li class="button is-rounded is-hovered"><%= link_to t.topic, t %></li>
+      <p class="button is-rounded is-hovered"><%= link_to t.topic, t %></p>
       <% end %>
-    </ul>
   </div>
-
-  <br/>
 
   <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
 
