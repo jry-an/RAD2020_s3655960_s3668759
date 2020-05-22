@@ -1,6 +1,15 @@
-<%# Bulma is heavily used below to create the view %>
-
+<!-- Bulma is heavily used below to create the view -->
 <div class="column is-8">
+  <%= link_to "<button class='button is-info'>Recent Posts</button>".html_safe, :sort => "created_at desc" %>
+  <% if user_signed_in? %>
+    <!-- Change the route here to the My Settings route -->
+    <%= link_to 'My Settings', current_user, class:"button is-info" %>
+  <% else %>
+    <%= link_to 'My Settings', login_path, class:"button is-info" %>
+  <% end %>
+
+  <br>
+  <br>
   <h3 class="title is-5 has-text-grey-light">Latest News</h3>
   <div class="discussions">
     <%# For each discussion, load it %>
@@ -12,7 +21,7 @@
         </div>
         <div class="column is-8" >
           <%= link_to discussion do %>
-            <h3 class="title is-5" id="discuss"><%= discussion.title %></h3>
+            <h5 class="title is-5" id="discuss"><%= discussion.title %></h5>
           <% end %>
           <div class="content">
             <%# Limiting the number of characters for the discussion, 
@@ -26,25 +35,17 @@
               <% end %>
               <%# Showing the username of the user who created the discussion %>
               by <%= link_to discussion.user.username, User.where(username: discussion.user.username).first %>
-              </small>
-              </em>
-            </p>
+            </small></em></p>
           </div>
         </div>
 
         <div class="column has-text-right">
-          <p><em><small>Views: <%= discussion.view_count %>
-          </small>
-          </em>
-          </p>
-          <p><em><small>Replies: <%= discussion.replies.count %>
-          </small>
-          </em>
-          </p>
+          <p><em><small><%= discussion.view_count %> <i class="far fa-eye"></i></small></em></p>
+          <p><em><small><%= discussion.replies.count %> <i class="far fa-comment-dots"></i></small></em></p>
         </div>
 
-        <%# Checks if the user is the author of the post, if so allows them to edit/delete 
-        the post and allows admins to edit/delete all discussions %>
+        <!-- Checks if the user is the author of the post, if so allows them to edit/delete 
+        the post and allows admins to edit/delete all discussions -->
         <% if discussion_author(discussion) %>
         <div class="column has-text-right">
           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>

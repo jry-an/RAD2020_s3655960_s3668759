@@ -10,7 +10,14 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
-    @discussions = Discussion.all.order('created_at desc')
+    # returns a list of discussions where the creation date is within the last 30 days
+    # @discussions = Discussion.where('created_at > ?', 30.days.ago)
+    if params[:toggle]
+    @discussions = Discussion.order(params[:sort]).where(topic_id: params[:toggle]).order('created_at desc')
+  else
+    @discussions = Discussion.order(params[:sort]).
+        where('created_at > ?', 30.days.ago)
+    end
   end
 
   # GET /discussions/1
@@ -22,7 +29,12 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/new
   def new
-    @discussion = current_user.discussions.new
+    if current_user
+      @discussion = current_user.discussions.new
+    else
+      flash[:notice] = 'Please login before creating a discussion'
+      redirect_to login_path
+    end
   end
 
   # GET /discussions/1/edit

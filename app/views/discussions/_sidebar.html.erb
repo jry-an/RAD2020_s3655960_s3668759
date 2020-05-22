@@ -1,75 +1,122 @@
-<%# Bulma is being used below %>
+<!-- Bulma being used below -->
 
-<div class="column is-3 is-offset-1">
+<div class="column is-4 is-offset-1">
 
   <h3 class="title is-5 has-text-grey-light">Recent Members</h3>
-        <table>
-          <tr>
-            <% Array(User.all.order('last_seen_at desc')[0..3]).each do |d| %>
+    <table>
+      <tr>
+        <% Array(User.all.order('last_seen_at desc')[0..3]).each do |d| %>
           <td>
-            <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20 ), d %>
-              Name: <%=link_to d.username, d %>
-            </td>
-            <% end %>
-              <tr>
-                <% Array(User.all.order('last_seen_at desc')[4..7]).each do |d| %>
-                  <td>
-                    <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20), d %>
-                    Name: <%=link_to d.username, d %>
-                  </td>
-                <% end %>
-                <tr>
-                  <% Array(User.all.order('last_seen_at desc')[8..11]).each do |d| %>
-                    <td>
-                      <%= link_to  gravatar_image_tag(d.email, class:'border-radius-20', size: 20), d %>
-                      Name: <%=link_to d.username, d %>
-                    </td>
-                  <%end%>
-                </tr>
-        </table>
-  <br/>
+            <%= link_to gravatar_image_tag(d.email, class:'border-radius-50', size: 5), d %>
+          </td>
+        <% end %>
+      </tr>
+      <tr>
+        <% Array(User.all.order('last_seen_at desc')[0..3]).each do |d| %>
+          <td class="has-text-centered">
+            <%= link_to d.username, d %>
+          </td>
+        <% end %>
+      </tr>
+
+      <tr>
+        <% Array(User.all.order('last_seen_at desc')[4..7]).each do |d| %>
+          <td>
+            <%= link_to gravatar_image_tag(d.email, class:'border-radius-50', size: 5), d %>
+          </td>
+        <% end %>
+      </tr>
+      <tr>
+        <% Array(User.all.order('last_seen_at desc')[4..7]).each do |d| %>
+          <td class="has-text-centered">
+            <%= link_to d.username, d %>
+          </td>
+        <% end %>
+      </tr>
+
+      <tr>
+        <% Array(User.all.order('last_seen_at desc')[8..11]).each do |d| %>
+          <td>
+            <%= link_to gravatar_image_tag(d.email, class:'border-radius-50', size: 5), d %>
+          </td>
+        <% end %>
+      </tr>
+      <tr>
+        <% Array(User.all.order('last_seen_at desc')[8..11]).each do |d| %>
+          <td class="has-text-centered">
+            <%= link_to d.username, d %>
+          </td>
+        <% end %>
+      </tr>
+    </table>
+
   <br/>
   <br/>
 
+  <%= link_to 'Topics', topics_path, class: 'title is-5 has-text-grey-light' %>
+  <br>
+  <br>
+<!--  <div class="buttons">-->
 
-  <h3 class="title is-5 has-text-grey-light">Topics</h3>
+<!--    <form class="smart-form">-->
+<!--        <label class="label font-sm">Toggle view</label>-->
+<!--      <select class="form-control input-sm" name= "toggle">-->
 
-  <ul class="list">
-    <% @topics.each do |t| %>
-    <li><%= link_to t.topic, t %></li>
-    <% end %>
-  </ul>
+      <%# @topics.each do |t| %>
 
-  <br/>
+<!--      <option value="<%#=t.id %>" ><%#=  t.topic %> </option>-->
+<!--            <input type="checkbox" value="<%#=t.id %>"> <%#= t.topic %>-->
+
+        <%# end %>
+
+<!--      </select><i></i><br>-->
+<!--      <button type="submit" class="btn btn-primary">Selected Post</button>-->
+<!--    </form>-->
+<!--  </div>-->
+
+
+  <div class="buttons">
+    <form class="filter_form" method="get">
+        <% @topics.each do |t| %>
+        <label for="toggle" class="switch switch-primary">
+          <%= check_box_tag("toggle[]", t.id) %>
+          <%=t.topic %>
+        </label>
+      <% end %>
+      <input type="submit" value="Selected Post" />
+    </form>
+
+  </div>
 
   <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
 
-  <%# Only allow users with admin status to create new topics %>
-  <%# Will be added later on %>
-  
   <br/>
   <br/>
-  <br/>
+
+
+
+
   <h3 class="title is-5 has-text-grey-light">Top Posts</h3>
-  <ul class="list">
-    <!--  This reverses the array and gets the top 5 posts-->
-    <% @discussions.sort_by{|d| d[:view_count]}.reverse[0..4].each do |d| %>
-      <li><%= link_to d.title, d %> <%= d.view_count %></li>
-    <% end %>
-  </ul>
+  <table class="table is-fullwidth is-striped">
+    <tbody>
+      <% Discussion.all.sort_by{|d| d[:view_count]}.reverse[0..4].each do |d| %>
+      <tr>
+        <td> <%= link_to d.title, d %> </td>
+        <td style="width:15%"> <%= d.view_count %> <i class="far fa-eye"></i></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 
   <br/>
   <br/>
-  <br/>
+
   <h3 class="title is-5 has-text-grey-light">Links</h3>
-  <ul>
-    <li><a href="http://www.google.com">Google</a></li>
-    <li><a href="https://www.rmit.edu.au/">RMIT</a></li>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-
-  </ul>
-
-
+  <div class="buttons">
+    <%= link_to "Google", "http://www.google.com", class: 'button is-rounded is-outlined' %>
+    <%= link_to "RMIT", "https://www.rmit.edu.au/", class: 'button is-rounded is-outlined' %>
+    <%= link_to "Ruby on Rails", "https://rubyonrails.org/", class: 'button is-rounded is-outlined' %>
+  </div>
 </div>
 
 
