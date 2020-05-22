@@ -15,3 +15,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+$(document).on("click","#yourButton",function(){
+    $(#recentPosts).toggle();
+});
