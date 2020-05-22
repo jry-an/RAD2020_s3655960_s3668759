@@ -34,8 +34,8 @@
         </div>
 
         <div class="column has-text-right">
-          <p><em><small>Views: <%= discussion.view_count %></small></em></p>
-          <p><em><small>Replies: <%= discussion.replies.count %></small></em></p>
+          <p><em><small><%= discussion.view_count %> <i class="far fa-eye"></i></small></em></p>
+          <p><em><small><%= discussion.replies.count %> <i class="far fa-comment-dots"></i></small></em></p>
         </div>
 
         <%# Checks if the user is the author of the post, if so allows them to edit/delete 
