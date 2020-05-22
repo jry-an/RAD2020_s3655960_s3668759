@@ -1,13 +1,13 @@
 <%# Bulma is heavily used below to create the view %>
-
 <div class="column is-8">
-  <%= link_to 'Recent Posts', {:controller => "discussions",:action=>"index", :method => :get}, class:"button is-info" %>
+  <%= link_to "Recent Posts", :sort => "created_at desc", class:"button is-info" %>
+
   <br>
   <br>
   <%# <h3 class="title is-5 has-text-grey-light">Latest News</h3> %>
   <div class="discussions">
     <%# For each discussion, load it %>
-    <% @discussions.order('created_at desc').each do |discussion| %>
+    <% @discussions.each do |discussion| %>
       <div class="columns bb-not-last pv10">
         <div class="column is-1">
           <%# Show the users image %>
