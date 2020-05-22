@@ -1,8 +1,13 @@
-<%# Bulma is heavily used below to create the view %>
+<!-- Bulma is heavily used below to create the view -->
 <div class="column is-8">
-  <button> <%= link_to "Recent Posts", :sort => "created_at desc" %></button>
+  <%= link_to "<button class='button is-info'>Recent Posts</button>".html_safe, :sort => "created_at desc" %>
   <button> <%= link_to "Selected Post", :toggle => 2 %></button>
-
+  <% if user_signed_in? %>
+    <!-- Change the route here to the My Settings route -->
+    <%= link_to 'My Settings', current_user, class:"button is-info" %>
+  <% else %>
+    <%= link_to 'My Settings', login_path, class:"button is-info" %>
+  <% end %>
 
   <br>
   <br>
@@ -40,8 +45,8 @@
           <p><em><small><%= discussion.replies.count %> <i class="far fa-comment-dots"></i></small></em></p>
         </div>
 
-        <%# Checks if the user is the author of the post, if so allows them to edit/delete 
-        the post and allows admins to edit/delete all discussions %>
+        <!-- Checks if the user is the author of the post, if so allows them to edit/delete 
+        the post and allows admins to edit/delete all discussions -->
         <% if discussion_author(discussion) %>
         <div class="column has-text-right">
           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>

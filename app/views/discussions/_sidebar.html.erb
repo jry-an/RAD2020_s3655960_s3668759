@@ -1,4 +1,4 @@
-<%# Bulma is being used below %>
+<!-- Bulma being used below -->
 
 <div class="column is-4 is-offset-1">
 
@@ -56,16 +56,16 @@
   <%= link_to 'Topics', topics_path, class: 'title is-5 has-text-grey-light' %>
   <br>
   <br>
-  <div class="switch switch-primary" data-toggle="buttons">
-      <% @topics.each do |t| %>
-      <label class="btn btn-primary">
-      <input type="checkbox" name="<%= t.topic %>" value="false">
-        <%= t.topic %>
+  <div class="buttons">
+    <% @topics.each do |t| %>
+      <!-- Link too will no longer be the correct use as they are just toggle button -->
+      <%# link_to t.topic, t, class: 'button is-rounded', :type => 'button', :'data-toggle' => 'button', :'aria-pressed' => 'false' #%>
+
+      <label class="button is-info is-rounded is-outlined">
+        <input type="checkbox"> <%= t.topic %>
       </label>
-      <% end %>
+    <% end %>
   </div>
-  <br>
-  <br>
 
   <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
 
@@ -89,9 +89,9 @@
 
   <h3 class="title is-5 has-text-grey-light">Links</h3>
   <div class="buttons">
-    <a href="http://www.google.com" class="button is-rounded">Google</a>
-    <a href="https://www.rmit.edu.au/" class="button is-rounded">RMIT</a>
-    <a href="https://rubyonrails.org/" class="button is-rounded">Ruby on Rails</a>
+    <%= link_to "Google", "http://www.google.com", class: 'button is-rounded is-outlined' %>
+    <%= link_to "RMIT", "https://www.rmit.edu.au/", class: 'button is-rounded is-outlined' %>
+    <%= link_to "Ruby on Rails", "https://rubyonrails.org/", class: 'button is-rounded is-outlined' %>
   </div>
 </div>
 
