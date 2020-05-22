@@ -1,6 +1,6 @@
 <%# Bulma is heavily used below to create the view %>
 <div class="column is-8">
-  <button> <%= link_to "Recent Posts", :sort => "created_at desc" %></button>
+  <%= link_to "<button class='button is-info'>Recent Posts</button>".html_safe, :sort => "created_at desc" %>
 
   <br>
   <br>
