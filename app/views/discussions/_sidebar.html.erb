@@ -76,13 +76,13 @@
 
 
   <div class="buttons">
-    <form class="filter_form", method="get">
+    <form class="filter_form" method="get">
         <% @topics.each do |t| %>
-        <label class="switch switch-primary">
+        <label for="toggle" class="switch switch-primary">
           <%= check_box_tag("toggle[]", t.id) %>
-      <%=t.topic %>
-          <span></span>
-        </label>      <% end %>
+          <%=t.topic %>
+        </label>
+      <% end %>
       <input type="submit" value="Selected Post" />
     </form>
 
