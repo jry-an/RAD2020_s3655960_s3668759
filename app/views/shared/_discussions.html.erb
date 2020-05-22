@@ -1,6 +1,12 @@
-<%# Bulma is heavily used below to create the view %>
+<!-- Bulma is heavily used below to create the view -->
 <div class="column is-8">
   <%= link_to "<button class='button is-info'>Recent Posts</button>".html_safe, :sort => "created_at desc" %>
+  <% if user_signed_in? %>
+    <!-- Change the route here to the My Settings route -->
+    <%= link_to 'My Settings', current_user, class:"button is-info" %>
+  <% else %>
+    <%= link_to 'My Settings', login_path, class:"button is-info" %>
+  <% end %>
 
   <br>
   <br>
