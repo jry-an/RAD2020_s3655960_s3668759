@@ -1,13 +1,18 @@
-<%# Bulma is heavily used below to create the view %>
+<!-- Bulma is heavily used below to create the view -->
 
 <div class="column is-8">
-  <%= link_to 'Recent Posts', {:controller => "discussions",:action=>"index", :method => :get}, class:"button is-info" %>
+  <%= link_to 'Recent Posts', { :controller => "discussions", :action=>"index", :method => :get}, class:"button is-info" %>
+  <% if user_signed_in? %>
+    <%= link_to 'My Settings', current_user, class:"button is-info" %>
+  <% else %>
+    <%= link_to 'My Settings', login_path, class:"button is-info" %>
+  <% end %>
   <br>
   <br>
   <h3 class="title is-5 has-text-grey-light">Latest News</h3>
   <div class="discussions">
     <%# For each discussion, load it %>
-    <% @discussions.where('created_at > ?', 30.days.ago).order('created_at desc').each do |discussion| %>
+    <% @discussions.all.order('created_at desc').each do |discussion| %>
       <div class="columns bb-not-last">
         <div class="column is-1">
           <%# Show the users image %>
@@ -38,8 +43,8 @@
           <p><em><small><%= discussion.replies.count %> <i class="far fa-comment-dots"></i></small></em></p>
         </div>
 
-        <%# Checks if the user is the author of the post, if so allows them to edit/delete 
-        the post and allows admins to edit/delete all discussions %>
+        <!-- Checks if the user is the author of the post, if so allows them to edit/delete 
+        the post and allows admins to edit/delete all discussions -->
         <% if discussion_author(discussion) %>
         <div class="column has-text-right">
           <%= link_to 'Edit', edit_discussion_path(discussion), class:'button' %>

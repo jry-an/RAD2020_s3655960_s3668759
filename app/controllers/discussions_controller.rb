@@ -86,7 +86,6 @@ class DiscussionsController < ApplicationController
     @topics = Topic.all.order('created_at desc')
   end
 
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def discussion_params
     params.require(:discussion).permit(:title, :content, :topic_id)

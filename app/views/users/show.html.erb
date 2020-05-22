@@ -1,7 +1,5 @@
 <% provide(:title, @user.name) %>
 <div>
-
-
   <div class="container">
     <div class="d-flex justify-content-center h-100">
       <center>
@@ -30,14 +28,14 @@
 
 <!--  show discussions - start of user discussions loop-->
   <p style="font-family: bold,'Arial Black'">Recent Posts</p>
-  <%@user.discussions.order('created_at desc').each do |user_discuss| %>
+  <% @user.discussions.order('created_at desc').each do |user_discuss| %>
     <%= link_to user_discuss do %>
       <h3 class="title is-5" id="user_discuss"><%= user_discuss.title %></h3>
     <% end %>
     <p><%= truncate(strip_markdown(user_discuss.content), length: 140) %></p>
     <p><em><small>Posted <%= time_ago_in_words(user_discuss.created_at) %> ago in
       <% if user_discuss.topic %>
-        <%# Link to this topics discussions %>
+        <!-- Link to this topics discussions -->
         <%= link_to user_discuss.topic.topic, user_discuss.topic %>
       <% end %>
     </small>
