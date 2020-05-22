@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_05_22_032146) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
-    t.datetime "last_seen_at", default: "2020-05-21 01:49:25"
+    t.datetime "last_seen_at", default: "2020-05-21 03:17:20"
     t.string "name"
     t.string "password_digest"
     t.string "remember_digest"

@@ -19,7 +19,7 @@
     <label class="label">Topic</label>
     <div class="control has-icons-left">
       <span class="select">
-        <%= f.input_field :topic_id, collection:@topics.map { |c| [c.topic, c.id] }, prompt: "Select topic" %>
+        <%= f.input_field :topic_id,  collection:@topics.map { |c| [c.topic, c.id] }, prompt: "Select topic" %>
       </span>
       <span class="icon is-small is-left">
         <i class="fa fa-tag"></i>
