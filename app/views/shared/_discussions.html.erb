@@ -1,8 +1,6 @@
 <!-- Bulma is heavily used below to create the view -->
 <div class="column is-8">
   <%= link_to "<button class='button is-info'>Recent Posts</button>".html_safe, :sort => "created_at desc" %>
-  <% topic_list = [] %>
-   <%= link_to "<button class='button is-info'>Selected Post</button>".html_safe, :toggle => 2 %>
   <% if user_signed_in? %>
     <!-- Change the route here to the My Settings route -->
     <%= link_to 'My Settings', current_user, class:"button is-info" %>

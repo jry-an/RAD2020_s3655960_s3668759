@@ -13,7 +13,7 @@ class DiscussionsController < ApplicationController
     # returns a list of discussions where the creation date is within the last 30 days
     # @discussions = Discussion.where('created_at > ?', 30.days.ago)
     if params[:toggle]
-    @discussions = Discussion.order(params[:sort]).where(topic_id: params[:toggle])
+    @discussions = Discussion.order(params[:sort]).where(topic_id: params[:toggle]).order('created_at desc')
   else
     @discussions = Discussion.order(params[:sort]).
         where('created_at > ?', 30.days.ago)
