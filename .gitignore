@@ -7,3 +7,4 @@
 .generators
 /log/
 tmp/
+log/development.log
