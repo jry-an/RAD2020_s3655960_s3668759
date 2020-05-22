@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
 
   </head>
 
@@ -73,19 +75,19 @@
     </div>
   </nav>
 
-<section class="section">
-  <div class="container">
-    <%= yield %>
-  </div>
-</section>
+  <section class="section">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>News+</strong> created by Casey Coulter (s3668759) and Jack Ryan (s3655960), Semester 1 2020</a>.
-        </p>
-      </div>
-    </footer>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>News+</strong> created by Casey Coulter (s3668759) and Jack Ryan (s3655960), Semester 1 2020.
+      </p>
+    </div>
+  </footer>
 
   </body>
 </html>
