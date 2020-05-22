@@ -61,7 +61,7 @@
       <!-- Link too will no longer be the correct use as they are just toggle button -->
       <%# link_to t.topic, t, class: 'button is-rounded', :type => 'button', :'data-toggle' => 'button', :'aria-pressed' => 'false' #%>
 
-      <label class="button is-info is-rounded">
+      <label class="button is-info is-rounded is-outlined">
         <input type="checkbox"> <%= t.topic %>
       </label>
     <% end %>
@@ -89,9 +89,9 @@
 
   <h3 class="title is-5 has-text-grey-light">Links</h3>
   <div class="buttons">
-    <%= link_to "Google", "http://www.google.com", class: 'button is-rounded' %>
-    <%= link_to "RMIT", "https://www.rmit.edu.au/", class: 'button is-rounded' %>
-    <%= link_to "Ruby on Rails", "https://rubyonrails.org/", class: 'button is-rounded' %>
+    <%= link_to "Google", "http://www.google.com", class: 'button is-rounded is-outlined' %>
+    <%= link_to "RMIT", "https://www.rmit.edu.au/", class: 'button is-rounded is-outlined' %>
+    <%= link_to "Ruby on Rails", "https://rubyonrails.org/", class: 'button is-rounded is-outlined' %>
   </div>
 </div>
 
