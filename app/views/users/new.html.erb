@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <h1>Sign Up</h1>
     <%= form_for(@user, url: signup_path) do |f| %>
       <%= render 'shared/error_messages' %>
       <%= f.label :username %>
@@ -21,5 +22,6 @@
       <br>
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
+    <p>Already a member? <%= link_to "Login now", login_path %></p>
   </div>
 </div>

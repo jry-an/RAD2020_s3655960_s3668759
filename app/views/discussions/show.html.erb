@@ -37,7 +37,7 @@
     <% else %>
     <%# If the user isn't signed in, display %>
     <p>To reply, please <%= link_to 'login', login_path %>. If you don't have an account with us, please 
-      <%= link_to 'Sign up', signup_path %> for one today.</p>
+      <%= link_to 'Sign up', "users/new" %> for one today.</p>
     <% end %>
 
   </div>
