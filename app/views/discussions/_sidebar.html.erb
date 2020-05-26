@@ -77,16 +77,25 @@
 
   <div class="buttons">
     <form class="filter_form" method="get">
-        <% @topics.each do |t| %>
+        <% @topics.where.not(topic: "News").each do |t| %>
         <label for="toggle" class="switch switch-primary">
           <%= check_box_tag("toggle[]", t.id) %>
           <%=t.topic %>
         </label>
-      <% end %>
+    <% end %>
       <input type="submit" value="Selected Post" />
     </form>
-
   </div>
+
+  <div class="buttons">
+      <% @topics.each do |t| %>
+        <label for="toggle" class="switch switch-primary">
+          <button ><%= t.topic %></button>
+        </label>
+      <% end %>
+  </div>
+
+
 
   <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
 
