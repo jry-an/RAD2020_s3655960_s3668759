@@ -1,7 +1,7 @@
 <!-- Bulma being used below -->
 
 <div class="column is-4 is-offset-1">
-
+  <!-- Area to display most recently signed up members -->
   <h3 class="title is-5 has-text-grey-light">Recent Members</h3>
     <table>
       <tr>
@@ -53,58 +53,28 @@
   <br/>
   <br/>
 
+  <!-- Show discussion topics and allow users to select topics they would like to see -->
   <%= link_to 'Topics', topics_path, class: 'title is-5 has-text-grey-light' %>
   <br>
   <br>
-<!--  <div class="buttons">-->
 
-<!--    <form class="smart-form">-->
-<!--        <label class="label font-sm">Toggle view</label>-->
-<!--      <select class="form-control input-sm" name= "toggle">-->
-
-      <%# @topics.each do |t| %>
-
-<!--      <option value="<%#=t.id %>" ><%#=  t.topic %> </option>-->
-<!--            <input type="checkbox" value="<%#=t.id %>"> <%#= t.topic %>-->
-
-        <%# end %>
-
-<!--      </select><i></i><br>-->
-<!--      <button type="submit" class="btn btn-primary">Selected Post</button>-->
-<!--    </form>-->
-<!--  </div>-->
-
-
-  <div class="buttons">
-    <form class="filter_form" method="get">
-        <% @topics.where.not(topic: "News").each do |t| %>
-        <label for="toggle" class="switch switch-primary">
-          <%= check_box_tag("toggle[]", t.id) %>
-          <%=t.topic %>
-        </label>
-    <% end %>
-      <input type="submit" value="Selected Post" />
-    </form>
-  </div>
-
-  <div class="buttons">
-      <% @topics.each do |t| %>
-        <label for="toggle" class="switch switch-primary">
-          <button ><%= t.topic %></button>
+  <form class="filter_form" method="get">
+    <div class="buttons">
+      <% @topics.where.not(topic: "News").each do |t| %>
+        <label class="button is-info is-rounded is-outlined">
+          <%= check_box_tag("toggle[]", t.id)%>
+          <%= t.topic %>
         </label>
       <% end %>
-  </div>
-
-
-
-  <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
+    </div>
+    <button type="submit" class='button is-info'>Selected Post</button>
+    <%= link_to 'New Topic', new_topic_path, class: 'button is-info' %>
+  </form>
 
   <br/>
   <br/>
 
-
-
-
+  <!-- Top posts on the forum based off view count -->
   <h3 class="title is-5 has-text-grey-light">Top Posts</h3>
   <table class="table is-fullwidth is-striped">
     <tbody>
@@ -118,8 +88,8 @@
   </table>
 
   <br/>
-  <br/>
 
+  <!-- Static links to other webpages -->
   <h3 class="title is-5 has-text-grey-light">Links</h3>
   <div class="buttons">
     <%= link_to "Google", "http://www.google.com", class: 'button is-rounded is-outlined' %>
