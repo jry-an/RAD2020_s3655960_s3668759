@@ -16,4 +16,5 @@
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  <p>Already a member? <%= link_to "Login now", login_path %></p>
 <% end %>
