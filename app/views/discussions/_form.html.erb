@@ -20,7 +20,7 @@
     <div class="control has-icons-left">
       <span class="select">
         <%#= f.input_field :topic_id,  collection:@topics.map.collect{|c| [c.topic, c.id]}, :prompt => "Select Topic " %>
-        <% options = [["Please select Topic",Topic.all.find_by(topic: "News").id]] + @topics.where.not(topic: "News").collect{ |i| [i.topic, i.id]}%>
+        <% options = [["Please select Topic", Topic.all.find_by(topic: "News").id]] + @topics.where.not(topic: "News").collect{ |i| [i.topic, i.id]} %>
         <%= f.select :topic_id, options_for_select(options) %>
       </span>
       <span class="icon is-small is-left">
@@ -31,7 +31,6 @@
 
   <div class="field">
     <div class="control">
-
       <%= f.button :submit, class:"button is-info" %>
     </div>
   </div>
