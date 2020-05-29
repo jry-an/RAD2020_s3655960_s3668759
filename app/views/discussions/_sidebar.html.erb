@@ -60,7 +60,7 @@
 
   <form class="filter_form" method="get">
     <div class="buttons">
-      <% @topics.each do |t| %>
+      <% @topics.where.not(topic: "News").each do |t| %>
         <label class="button is-info is-rounded is-outlined">
           <%= check_box_tag("toggle[]", t.id)%>
           <%= t.topic %>
@@ -97,6 +97,3 @@
     <%= link_to "Ruby on Rails", "https://rubyonrails.org/", class: 'button is-rounded is-outlined' %>
   </div>
 </div>
-
-
-
