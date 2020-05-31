@@ -5,7 +5,9 @@ Casey Coulter - s3668759
 
 Highest level attempted: DI
 
-Toggle: TODO
+Toggle: 	Project	User	18/05/2020	19/05/2020	20/05/2020	21/05/2020	22/05/2020	23/05/2020	24/05/2020	Total
+            	Casey Coulter	0:00:00	0:00:00	0:00:00	0:00:00	0:00:00	3:15:15	17:12:17	20:27:32
+            RAD	Jack Ryan	0:00:00	5:00:02	4:00:49	3:57:30	5:48:36	0:00:00	0:00:00	        19:30:06
 
 https://github.com/jryan2605/RAD2020_s3655960_s3668759
 
